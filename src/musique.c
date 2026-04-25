@@ -28,10 +28,12 @@ void input()
 
     if (IsKeyPressed(KEY_RIGHT)) {
         f32 amount = GetMusicTimePlayed(music) + 5;
+        volume = fmax(0, amount);
         SeekMusicStream(music, amount);
     }
     if (IsKeyPressed(KEY_LEFT)) {
         f32 amount = GetMusicTimePlayed(music) - 5;
+        volume = fmin(amount , 1);
         SeekMusicStream(music, amount);
     }
 }
