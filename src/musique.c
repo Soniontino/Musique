@@ -17,9 +17,9 @@ void start()
 
 void input()
 {
-    if (IsKeyPressedRepeat(KEY_L)) {
+    if (IsKeyPressed(KEY_L)) {
         printf(
-            "Time passed: %f\nVolume: %f",
+            "Time passed: %f\nVolume: %f\n\n",
             GetMusicTimePlayed(music), volume
         );
     }
@@ -30,18 +30,16 @@ void input()
         paused = !paused;
     }
 
-    if (IsKeyDown(KEY_UP)) volume *= (default_volume * 1.01f);
-    if (IsKeyDown(KEY_DOWN)) volume /= (default_volume * 1.01f);
+    if (IsKeyDown(KEY_UP)) volume += 0.01f;
+    if (IsKeyDown(KEY_DOWN)) volume -= 0.01f;
 
     if (IsKeyPressed(KEY_RIGHT)) {
-        f32 amount = GetMusicTimePlayed(music) + 5;
-        volume = fmax(0, amount);
+        float amount = GetMusicTimePlayed(music) + 5;
         SeekMusicStream(music, amount);
     }
     if (IsKeyPressed(KEY_LEFT)) {
-        f32 amount = GetMusicTimePlayed(music) - 5;
-        volume = fmin(amount , 1);
-        SeekMusicStream(music, amount);
+        float amount = GetMusicTimePlayed(music) - 5;
+        SeekMusicStream(music, fmax(0, amount));
     }
 }
 
