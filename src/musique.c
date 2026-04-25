@@ -17,14 +17,21 @@ void start()
 
 void input()
 {
+    if (IsKeyPressed(KEY_L)) {
+        printf(
+            "Time passed: %f\nVolume: %f\n\n",
+            GetMusicTimePlayed(music), volume
+        );
+    }
+
     if (IsKeyPressed(KEY_SPACE)) {
         if (paused) ResumeMusicStream(music);
         else PauseMusicStream(music);
         paused = !paused;
     }
 
-    if (IsKeyDown(KEY_UP)) volume *= (default_volume * 1.01f);
-    if (IsKeyDown(KEY_DOWN)) volume /= (default_volume * 1.01f);
+    if (IsKeyDown(KEY_UP)) volume += 0.01f;
+    if (IsKeyDown(KEY_DOWN)) volume -= 0.01f;
 
     if (IsKeyPressed(KEY_RIGHT)) {
         f32 amount = GetMusicTimePlayed(music) + 5;
