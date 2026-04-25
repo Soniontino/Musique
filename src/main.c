@@ -1,15 +1,23 @@
-<<<<<<< Updated upstream
+// musiqe application entry point
 #include "musique.h"
-=======
-#include "core.h"
 
-void update()
+int main(void)
 {
+    InitWindow(660, 260, "Musique");
+    SetTargetFPS(60);
 
-}
+    start();
+    while (!WindowShouldClose()) {
+        input();
+        update();
+        BeginDrawing();
+        ClearBackground(BLACK);
+        render();
+        EndDrawing();
+    }
 
-void render()
-{
-
+    quit();
+    CloseWindow();
+    return 0;
 }
 
