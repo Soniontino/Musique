@@ -1,10 +1,8 @@
-// src/main.c
-
 #include "musique.h"
 
 int main(void)
 {
-    InitWindow(660, 260, "Musique");
+    InitWindow(1080, 640, "Musique");
     SetTargetFPS(60);
 
     start();

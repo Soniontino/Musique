@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/main.dir/src/main.c.o.d"
   "CMakeFiles/main.dir/src/musique.c.o"
   "CMakeFiles/main.dir/src/musique.c.o.d"
+  "CMakeFiles/main.dir/src/utils.c.o"
+  "CMakeFiles/main.dir/src/utils.c.o.d"
   "main"
   "main.pdb"
 )

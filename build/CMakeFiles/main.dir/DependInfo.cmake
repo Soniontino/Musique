@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ziya/dev/main/musique/src/main.c" "CMakeFiles/main.dir/src/main.c.o" "gcc" "CMakeFiles/main.dir/src/main.c.o.d"
   "/home/ziya/dev/main/musique/src/musique.c" "CMakeFiles/main.dir/src/musique.c.o" "gcc" "CMakeFiles/main.dir/src/musique.c.o.d"
+  "/home/ziya/dev/main/musique/src/utils.c" "CMakeFiles/main.dir/src/utils.c.o" "gcc" "CMakeFiles/main.dir/src/utils.c.o.d"
   "" "main" "gcc" "CMakeFiles/main.dir/link.d"
   )
 

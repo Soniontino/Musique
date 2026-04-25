@@ -1,6 +1,5 @@
-CMakeFiles/main.dir/src/musique.c.o: \
- /home/ziya/dev/main/musique/src/musique.c /usr/include/stdc-predef.h \
- /home/ziya/dev/main/musique/src/musique.h \
+CMakeFiles/main.dir/src/utils.c.o: \
+ /home/ziya/dev/main/musique/src/utils.c /usr/include/stdc-predef.h \
  /home/ziya/dev/main/musique/src/utils.h \
  /home/ziya/dev/main/musique/src/core.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \

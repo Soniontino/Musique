@@ -2,16 +2,19 @@
 
 Music music;
 bool paused = false;
-const float default_volume = 1.0f;
-float volume = default_volume;
-
+f32 volume = 1.0f;
 
 void start()
 {
+    system("clear");
     SetTargetFPS(60);
     InitAudioDevice();
+
     music = LoadMusicStream("song.mp3");
-    SetMusicVolume(music, volume);
+    if (music.stream.buffer == NULL) {
+        printf("Failed to load music file!\n");
+    }
+
     PlayMusicStream(music);
 }
 
@@ -30,12 +33,12 @@ void input()
         paused = !paused;
     }
 
-    if (IsKeyDown(KEY_UP)) volume += 0.01f;
-    if (IsKeyDown(KEY_DOWN)) volume -= 0.01f;
+    if (KeyHadPressing(KEY_UP)) volume += 2/100.0;
+    if (KeyHadPressing(KEY_DOWN)) volume -= 2/100.0;
 
     if (IsKeyPressed(KEY_RIGHT)) {
         f32 amount = GetMusicTimePlayed(music) + 5;
-        float total = GetMusicTimeLength(music);
+        f32 total = GetMusicTimeLength(music);
         amount = fmin(amount, total);
         SeekMusicStream(music, amount);
     }
@@ -58,9 +61,9 @@ void update()
 
 void render()
 {
-    float played = GetMusicTimePlayed(music);
-    float total  = GetMusicTimeLength(music);
-    float progress = (total > 0) ? played / total : 0;
+    f32 played = GetMusicTimePlayed(music);
+    f32 total  = GetMusicTimeLength(music);
+    f32 progress = (total > 0) ? played / total : 0;
 
     DrawText("SPACE = Play/Pause", 20, 20, 20, RAYWHITE);
     DrawText("UP/DOWN = Volume", 20, 50, 20, RAYWHITE);

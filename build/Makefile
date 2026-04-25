@@ -177,6 +177,30 @@ src/musique.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.c.s
 .PHONY : src/musique.c.s
 
+src/utils.o: src/utils.c.o
+.PHONY : src/utils.o
+
+# target to build an object file
+src/utils.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.c.o
+.PHONY : src/utils.c.o
+
+src/utils.i: src/utils.c.i
+.PHONY : src/utils.i
+
+# target to preprocess a source file
+src/utils.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.c.i
+.PHONY : src/utils.c.i
+
+src/utils.s: src/utils.c.s
+.PHONY : src/utils.s
+
+# target to generate assembly for a file
+src/utils.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.c.s
+.PHONY : src/utils.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +216,9 @@ help:
 	@echo "... src/musique.o"
 	@echo "... src/musique.i"
 	@echo "... src/musique.s"
+	@echo "... src/utils.o"
+	@echo "... src/utils.i"
+	@echo "... src/utils.s"
 .PHONY : help
 
 

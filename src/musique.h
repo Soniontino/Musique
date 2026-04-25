@@ -1,5 +1,5 @@
 #pragma once
-#include "core.h"
+#include "utils.h"
 
 void start();
 void input();

@@ -4,6 +4,7 @@ main: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o \
   CMakeFiles/main.dir/src/main.c.o \
   CMakeFiles/main.dir/src/musique.c.o \
+  CMakeFiles/main.dir/src/utils.c.o \
   /usr/lib/libraylib.so.6.0.0 \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/../../../../lib/libm.so \
@@ -50,6 +51,8 @@ main: \
 CMakeFiles/main.dir/src/main.c.o:
 
 CMakeFiles/main.dir/src/musique.c.o:
+
+CMakeFiles/main.dir/src/utils.c.o:
 
 /usr/lib/libraylib.so.6.0.0:
 
