@@ -6,9 +6,11 @@ float volume = 1.0f;
 
 void start()
 {
-    printf("START\n");
     SetTargetFPS(60);
+    InitAudioDevice();
+    music = LoadMusicStream("song.mp3");
     SetMusicVolume(music, volume);
+    PlayMusicStream(music);
 }
 
 void update()
@@ -55,16 +57,21 @@ void render()
     DrawText(paused ? "PAUSED" : "PLAYING", 20, 210, 20, YELLOW);
 }
 
+void quit()
+{
+    UnloadMusicStream(music);
+    CloseAudioDevice();
+}
+
+
 int main()
 {
+    SetConfigFlags(
+        FLAG_WINDOW_RESIZABLE
+    );
     InitWindow(1280, 720, "Music Player");
-    InitAudioDevice();
 
-    music = LoadMusicStream("song.mp3");
-    PlayMusicStream(music);
-
-    start(); 
-
+    start();
     while (!WindowShouldClose()) {
         update();
         BeginDrawing();
@@ -73,7 +80,6 @@ int main()
         EndDrawing();
     }
 
-    UnloadMusicStream(music);
-    CloseAudioDevice();
+    quit();
     CloseWindow();
 }
