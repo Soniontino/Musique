@@ -17,6 +17,13 @@ void start()
 
 void input()
 {
+    if (IsKeyPressedRepeat(KEY_L)) {
+        printf(
+            "Time passed: %f\nVolume: %f",
+            GetMusicTimePlayed(music), volume
+        );
+    }
+
     if (IsKeyPressed(KEY_SPACE)) {
         if (paused) ResumeMusicStream(music);
         else PauseMusicStream(music);
