@@ -2,7 +2,8 @@
 
 Music music;
 bool paused = false;
-float volume = 1.0f;
+const float default_volume = 1.0f;
+float volume = default_volume;
 
 
 void start()
@@ -14,27 +15,34 @@ void start()
     PlayMusicStream(music);
 }
 
-void update()
+void input()
 {
-    UpdateMusicStream(music);
-
     if (IsKeyPressed(KEY_SPACE)) {
         if (paused) ResumeMusicStream(music);
         else PauseMusicStream(music);
         paused = !paused;
     }
 
-    if (IsKeyDown(KEY_UP)) volume += 0.01f;
-    if (IsKeyDown(KEY_DOWN)) volume -= 0.01f;
-    if (volume < 0) volume = 0;
-    if (volume > 1) volume = 1;
+    if (IsKeyDown(KEY_UP)) volume *= (default_volume * 1.01f);
+    if (IsKeyDown(KEY_DOWN)) volume /= (default_volume * 1.01f);
+
+    if (IsKeyPressed(KEY_RIGHT)) {
+        f32 amount = GetMusicTimePlayed(music) + 5;
+        SeekMusicStream(music, amount);
+    }
+    if (IsKeyPressed(KEY_LEFT)) {
+        f32 amount = GetMusicTimePlayed(music) - 5;
+        SeekMusicStream(music, amount);
+    }
+}
+
+void update()
+{
+    UpdateMusicStream(music);
+
+    volume = fmax(0, volume); volume = fmin(volume, 1);
+
     SetMusicVolume(music, volume);
-
-    if (IsKeyPressed(KEY_RIGHT))
-        SeekMusicStream(music, GetMusicTimePlayed(music) + 5);
-
-    if (IsKeyPressed(KEY_LEFT))
-        SeekMusicStream(music, GetMusicTimePlayed(music) - 5);
 }
 
 void render()

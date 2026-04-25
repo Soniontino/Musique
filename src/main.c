@@ -9,6 +9,7 @@ int main()
 
     start();
     while (!WindowShouldClose()) {
+        input();
         update();
         BeginDrawing();
         ClearBackground(BLACK);
