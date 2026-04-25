@@ -1,5 +1,4 @@
-#include "raylib.h"
-#include <stdio.h>
+#include "core.h"
 
 Music music;
 bool paused = false;
