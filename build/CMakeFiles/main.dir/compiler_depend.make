@@ -11,8 +11,16 @@ CMakeFiles/main.dir/src/main.c.o: /home/ziya/dev/main/musique/src/main.c \
   /usr/include/bits/endianness.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-fast.h \
+  /usr/include/bits/fp-logb.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/libm-simd-decl-stubs.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/math-vector.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls-macros.h \
+  /usr/include/bits/mathcalls.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/select.h \
@@ -53,6 +61,7 @@ CMakeFiles/main.dir/src/main.c.o: /home/ziya/dev/main/musique/src/main.c \
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/math.h \
   /usr/include/raylib.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
@@ -76,8 +85,16 @@ CMakeFiles/main.dir/src/musique.c.o: /home/ziya/dev/main/musique/src/musique.c \
   /usr/include/bits/endianness.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
+  /usr/include/bits/flt-eval-method.h \
+  /usr/include/bits/fp-fast.h \
+  /usr/include/bits/fp-logb.h \
   /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/libm-simd-decl-stubs.h \
   /usr/include/bits/long-double.h \
+  /usr/include/bits/math-vector.h \
+  /usr/include/bits/mathcalls-helper-functions.h \
+  /usr/include/bits/mathcalls-macros.h \
+  /usr/include/bits/mathcalls.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/select.h \
@@ -118,6 +135,7 @@ CMakeFiles/main.dir/src/musique.c.o: /home/ziya/dev/main/musique/src/musique.c \
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/math.h \
   /usr/include/raylib.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
@@ -185,8 +203,6 @@ CMakeFiles/main.dir/src/musique.c.o:
 
 /usr/lib/libgcc_s.so:
 
-/usr/lib/libc.so:
-
 /usr/lib/crtn.o:
 
 CMakeFiles/main.dir/src/main.c.o:
@@ -205,21 +221,19 @@ CMakeFiles/main.dir/src/main.c.o:
 
 /usr/include/sys/types.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
+/usr/lib/libm.so.6:
 
-/usr/include/bits/types/FILE.h:
-
-/usr/lib/libc_nonshared.a:
-
-/usr/include/bits/types.h:
+/usr/include/sys/select.h:
 
 /usr/include/sys/cdefs.h:
 
-/usr/include/bits/time64.h:
+/usr/include/stdlib.h:
 
-/usr/include/bits/byteswap.h:
+/usr/include/stdint.h:
 
-/usr/include/bits/thread-shared-types.h:
+/usr/include/math.h:
+
+/usr/include/gnu/stubs.h:
 
 /usr/include/bits/wchar.h:
 
@@ -227,13 +241,37 @@ CMakeFiles/main.dir/src/main.c.o:
 
 /usr/include/alloca.h:
 
-/usr/include/bits/select.h:
-
-/usr/include/features-time64.h:
-
 /usr/include/bits/stdint-intn.h:
 
 /usr/include/gnu/stubs-64.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/raylib.h:
+
+/usr/include/bits/types/__fpos64_t.h:
+
+/usr/include/features-time64.h:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/usr/include/stdio.h:
+
+/home/ziya/dev/main/musique/src/main.c:
+
+/usr/include/bits/types/timer_t.h:
+
+/usr/include/bits/long-double.h:
+
+/usr/include/bits/fp-logb.h:
+
+/usr/include/bits/mathcalls-macros.h:
+
+/usr/include/bits/types/clock_t.h:
+
+/usr/include/bits/libc-header-start.h:
 
 /home/ziya/dev/main/musique/src/core.h:
 
@@ -241,45 +279,67 @@ CMakeFiles/main.dir/src/main.c.o:
 
 /home/ziya/dev/main/musique/src/musique.h:
 
-/usr/include/bits/timesize.h:
-
-/usr/include/bits/endian.h:
-
 /usr/include/bits/types/__sigset_t.h:
 
 /usr/lib/libraylib.so.6.0.0:
 
 /usr/include/bits/waitflags.h:
 
-/usr/include/bits/libc-header-start.h:
+/usr/include/bits/libm-simd-decl-stubs.h:
 
 /usr/include/bits/endianness.h:
 
-/usr/include/bits/types/__FILE.h:
+/usr/include/bits/byteswap.h:
 
-/usr/include/bits/stdlib-float.h:
+/usr/include/bits/time64.h:
+
+/usr/include/bits/mathcalls.h:
 
 /usr/include/bits/types/sigset_t.h:
 
 /usr/include/bits/floatn-common.h:
 
-/usr/include/bits/long-double.h:
-
 /usr/include/bits/pthreadtypes.h:
 
 /usr/include/bits/floatn.h:
 
-/usr/include/stdc-predef.h:
+/usr/include/bits/flt-eval-method.h:
 
-/usr/include/bits/pthreadtypes-arch.h:
+/usr/lib/libc.so:
+
+/usr/include/bits/fp-fast.h:
+
+/usr/lib32/libXau.so.6:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
+
+/usr/include/bits/waitstatus.h:
+
+/usr/include/bits/thread-shared-types.h:
+
+/usr/include/bits/endian.h:
+
+/usr/include/bits/timesize.h:
+
+/usr/lib/libc_nonshared.a:
+
+/usr/include/bits/types.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
+
+/usr/include/bits/types/FILE.h:
+
+/usr/include/bits/stdlib-float.h:
+
+/usr/include/bits/types/__FILE.h:
+
+/usr/include/bits/math-vector.h:
 
 /usr/include/bits/types/__fpos_t.h:
 
 /usr/include/bits/wordsize.h:
 
 /usr/include/bits/types/__mbstate_t.h:
-
-/usr/include/bits/types/clock_t.h:
 
 /home/ziya/dev/main/musique/src/musique.c:
 
@@ -301,10 +361,6 @@ CMakeFiles/main.dir/src/main.c.o:
 
 /usr/include/bits/types/struct_FILE.h:
 
-/usr/lib/libm.so.6:
-
-/usr/include/sys/select.h:
-
 /usr/include/bits/types/struct_timespec.h:
 
 /usr/lib32/libXdmcp.so.6:
@@ -313,30 +369,10 @@ CMakeFiles/main.dir/src/main.c.o:
 
 /usr/include/bits/types/struct_timeval.h:
 
+/usr/include/bits/mathcalls-helper-functions.h:
+
 /usr/include/bits/struct_rwlock.h:
 
 /usr/include/bits/types/time_t.h:
 
-/usr/include/stdlib.h:
-
-/usr/lib32/libXau.so.6:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
-
-/usr/include/bits/waitstatus.h:
-
 /usr/include/features.h:
-
-/usr/include/gnu/stubs.h:
-
-/usr/include/bits/types/__fpos64_t.h:
-
-/usr/include/raylib.h:
-
-/usr/include/stdint.h:
-
-/home/ziya/dev/main/musique/src/main.c:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/stdio.h:

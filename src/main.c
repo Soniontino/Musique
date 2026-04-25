@@ -1,4 +1,5 @@
-// musiqe application entry point
+// src/main.c
+
 #include "musique.h"
 
 int main(void)
@@ -20,4 +21,3 @@ int main(void)
     CloseWindow();
     return 0;
 }
-
