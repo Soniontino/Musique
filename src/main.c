@@ -1,21 +1,15 @@
+<<<<<<< Updated upstream
 #include "musique.h"
+=======
+#include "core.h"
 
-int main()
+void update()
 {
-    SetConfigFlags(
-        FLAG_WINDOW_RESIZABLE
-    );
-    InitWindow(1280, 720, "Music Player");
 
-    start();
-    while (!WindowShouldClose()) {
-        update();
-        BeginDrawing();
-        ClearBackground(BLACK);
-        render();
-        EndDrawing();
-    }
-
-    quit();
-    CloseWindow();
 }
+
+void render()
+{
+
+}
+
