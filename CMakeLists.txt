@@ -1,8 +1,12 @@
 cmake_minimum_required(VERSION 3.20)
-project(impls)
+project(Musique)
 
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_CXX_STANDARD 23)
+set(CMAKE_C_STANDARD_REQUIRED ON)
+set(CMAKE_C_STANDARD 11)
 
-file(GLOB_RECURSE SOURCES "src/*.cpp")
+find_package(raylib REQUIRED)
+
+file(GLOB_RECURSE SOURCES "src/*.c")
 add_executable(main ${SOURCES})
+
+target_link_libraries(main PRIVATE raylib)

@@ -1,8 +1,6 @@
 #pragma once
-#include <iostream>
-#include <cstdint>
+#include <stdint.h>
+#include <stdlib.h>
+// external
+#include <raylib.h>
 
-using uint32 = uint32_t;
-using usize = size_t;
-using int64 = int64_t;
-using string = std::string;

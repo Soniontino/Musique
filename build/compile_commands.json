@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/home/ziya/dev/main/musique/build",
+  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -g -std=gnu11 -o CMakeFiles/main.dir/src/main.c.o -c /home/ziya/dev/main/musique/src/main.c",
+  "file": "/home/ziya/dev/main/musique/src/main.c",
+  "output": "CMakeFiles/main.dir/src/main.c.o"
+}
+]
