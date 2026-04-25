@@ -3,6 +3,72 @@
 
 CMakeFiles/main.dir/src/main.c.o: /home/ziya/dev/main/musique/src/main.c \
   /home/ziya/dev/main/musique/src/core.h \
+  /home/ziya/dev/main/musique/src/musique.h \
+  /usr/include/alloca.h \
+  /usr/include/bits/atomic_wide_counter.h \
+  /usr/include/bits/byteswap.h \
+  /usr/include/bits/endian.h \
+  /usr/include/bits/endianness.h \
+  /usr/include/bits/floatn-common.h \
+  /usr/include/bits/floatn.h \
+  /usr/include/bits/libc-header-start.h \
+  /usr/include/bits/long-double.h \
+  /usr/include/bits/pthreadtypes-arch.h \
+  /usr/include/bits/pthreadtypes.h \
+  /usr/include/bits/select.h \
+  /usr/include/bits/stdint-intn.h \
+  /usr/include/bits/stdint-least.h \
+  /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio_lim.h \
+  /usr/include/bits/stdlib-float.h \
+  /usr/include/bits/struct_mutex.h \
+  /usr/include/bits/struct_rwlock.h \
+  /usr/include/bits/thread-shared-types.h \
+  /usr/include/bits/time64.h \
+  /usr/include/bits/timesize.h \
+  /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
+  /usr/include/bits/types/__sigset_t.h \
+  /usr/include/bits/types/clock_t.h \
+  /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
+  /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
+  /usr/include/bits/types/struct_timespec.h \
+  /usr/include/bits/types/struct_timeval.h \
+  /usr/include/bits/types/time_t.h \
+  /usr/include/bits/types/timer_t.h \
+  /usr/include/bits/typesizes.h \
+  /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/waitflags.h \
+  /usr/include/bits/waitstatus.h \
+  /usr/include/bits/wchar.h \
+  /usr/include/bits/wordsize.h \
+  /usr/include/endian.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/gnu/stubs-64.h \
+  /usr/include/gnu/stubs.h \
+  /usr/include/raylib.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/sys/cdefs.h \
+  /usr/include/sys/select.h \
+  /usr/include/sys/types.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h
+
+CMakeFiles/main.dir/src/musique.c.o: /home/ziya/dev/main/musique/src/musique.c \
+  /home/ziya/dev/main/musique/src/core.h \
+  /home/ziya/dev/main/musique/src/musique.h \
   /usr/include/alloca.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
@@ -89,8 +155,11 @@ main: /usr/lib/Scrt1.o \
   /usr/lib32/libXau.so.6 \
   /usr/lib32/libXdmcp.so.6 \
   /usr/lib32/libxcb.so.1 \
-  CMakeFiles/main.dir/src/main.c.o
+  CMakeFiles/main.dir/src/main.c.o \
+  CMakeFiles/main.dir/src/musique.c.o
 
+
+CMakeFiles/main.dir/src/musique.c.o:
 
 /usr/lib32/libX11.so.6:
 
@@ -134,6 +203,8 @@ CMakeFiles/main.dir/src/main.c.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h:
 
+/usr/include/sys/types.h:
+
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
 
 /usr/include/bits/types/FILE.h:
@@ -162,13 +233,13 @@ CMakeFiles/main.dir/src/main.c.o:
 
 /usr/include/bits/stdint-intn.h:
 
-/usr/include/bits/struct_mutex.h:
-
 /usr/include/gnu/stubs-64.h:
 
 /home/ziya/dev/main/musique/src/core.h:
 
-/usr/include/bits/libc-header-start.h:
+/usr/include/bits/struct_mutex.h:
+
+/home/ziya/dev/main/musique/src/musique.h:
 
 /usr/include/bits/timesize.h:
 
@@ -179,6 +250,8 @@ CMakeFiles/main.dir/src/main.c.o:
 /usr/lib/libraylib.so.6.0.0:
 
 /usr/include/bits/waitflags.h:
+
+/usr/include/bits/libc-header-start.h:
 
 /usr/include/bits/endianness.h:
 
@@ -192,21 +265,23 @@ CMakeFiles/main.dir/src/main.c.o:
 
 /usr/include/bits/long-double.h:
 
-/usr/include/bits/types/__fpos_t.h:
+/usr/include/bits/pthreadtypes.h:
 
-/usr/include/bits/wordsize.h:
+/usr/include/bits/floatn.h:
 
 /usr/include/stdc-predef.h:
 
 /usr/include/bits/pthreadtypes-arch.h:
 
-/usr/include/bits/floatn.h:
+/usr/include/bits/types/__fpos_t.h:
 
-/usr/include/bits/pthreadtypes.h:
+/usr/include/bits/wordsize.h:
 
 /usr/include/bits/types/__mbstate_t.h:
 
 /usr/include/bits/types/clock_t.h:
+
+/home/ziya/dev/main/musique/src/musique.c:
 
 /usr/include/bits/atomic_wide_counter.h:
 
@@ -265,5 +340,3 @@ CMakeFiles/main.dir/src/main.c.o:
 /usr/include/bits/types/timer_t.h:
 
 /usr/include/stdio.h:
-
-/usr/include/sys/types.h:

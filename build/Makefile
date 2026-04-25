@@ -153,6 +153,30 @@ src/main.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.s
 .PHONY : src/main.c.s
 
+src/musique.o: src/musique.c.o
+.PHONY : src/musique.o
+
+# target to build an object file
+src/musique.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.c.o
+.PHONY : src/musique.c.o
+
+src/musique.i: src/musique.c.i
+.PHONY : src/musique.i
+
+# target to preprocess a source file
+src/musique.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.c.i
+.PHONY : src/musique.c.i
+
+src/musique.s: src/musique.c.s
+.PHONY : src/musique.s
+
+# target to generate assembly for a file
+src/musique.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.c.s
+.PHONY : src/musique.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -165,6 +189,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/musique.o"
+	@echo "... src/musique.i"
+	@echo "... src/musique.s"
 .PHONY : help
 
 

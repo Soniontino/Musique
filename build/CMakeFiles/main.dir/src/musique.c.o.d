@@ -1,5 +1,6 @@
-CMakeFiles/main.dir/src/main.c.o: /home/ziya/dev/main/musique/src/main.c \
- /usr/include/stdc-predef.h /home/ziya/dev/main/musique/src/musique.h \
+CMakeFiles/main.dir/src/musique.c.o: \
+ /home/ziya/dev/main/musique/src/musique.c /usr/include/stdc-predef.h \
+ /home/ziya/dev/main/musique/src/musique.h \
  /home/ziya/dev/main/musique/src/core.h /usr/include/stdio.h \
  /usr/include/bits/libc-header-start.h /usr/include/features.h \
  /usr/include/features-time64.h /usr/include/bits/wordsize.h \
