@@ -18,6 +18,7 @@ CMakeFiles/main.dir/src/main.c.o: /home/ziya/dev/main/musique/src/main.c \
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
+  /usr/include/bits/stdio_lim.h \
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
@@ -25,10 +26,17 @@ CMakeFiles/main.dir/src/main.c.o: /home/ziya/dev/main/musique/src/main.c \
   /usr/include/bits/time64.h \
   /usr/include/bits/timesize.h \
   /usr/include/bits/types.h \
+  /usr/include/bits/types/FILE.h \
+  /usr/include/bits/types/__FILE.h \
+  /usr/include/bits/types/__fpos64_t.h \
+  /usr/include/bits/types/__fpos_t.h \
+  /usr/include/bits/types/__mbstate_t.h \
   /usr/include/bits/types/__sigset_t.h \
   /usr/include/bits/types/clock_t.h \
   /usr/include/bits/types/clockid_t.h \
+  /usr/include/bits/types/cookie_io_functions_t.h \
   /usr/include/bits/types/sigset_t.h \
+  /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/struct_timespec.h \
   /usr/include/bits/types/struct_timeval.h \
   /usr/include/bits/types/time_t.h \
@@ -47,6 +55,7 @@ CMakeFiles/main.dir/src/main.c.o: /home/ziya/dev/main/musique/src/main.c \
   /usr/include/raylib.h \
   /usr/include/stdc-predef.h \
   /usr/include/stdint.h \
+  /usr/include/stdio.h \
   /usr/include/stdlib.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
@@ -83,8 +92,6 @@ main: /usr/lib/Scrt1.o \
   CMakeFiles/main.dir/src/main.c.o
 
 
-/usr/lib32/libxcb.so.1:
-
 /usr/lib32/libX11.so.6:
 
 /usr/lib/libxcb.so.1:
@@ -101,15 +108,35 @@ main: /usr/lib/Scrt1.o \
 
 /usr/lib/ld-linux-x86-64.so.2:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
 
 /usr/lib/libm.so:
 
 /usr/lib/libgcc_s.so.1:
 
-/usr/include/bits/types/clock_t.h:
+/usr/lib/libgcc_s.so:
+
+/usr/lib/libc.so:
+
+/usr/lib/crtn.o:
+
+CMakeFiles/main.dir/src/main.c.o:
+
+/usr/lib/crti.o:
+
+/usr/lib/Scrt1.o:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
+
+/usr/include/bits/types/FILE.h:
 
 /usr/lib/libc_nonshared.a:
 
@@ -121,17 +148,17 @@ main: /usr/lib/Scrt1.o \
 
 /usr/include/bits/byteswap.h:
 
-/usr/include/bits/types/struct_timespec.h:
-
 /usr/include/bits/thread-shared-types.h:
 
-/usr/include/bits/types/sigset_t.h:
-
-/usr/include/bits/stdlib-float.h:
+/usr/include/bits/wchar.h:
 
 /usr/include/bits/stdint-least.h:
 
 /usr/include/alloca.h:
+
+/usr/include/bits/select.h:
+
+/usr/include/features-time64.h:
 
 /usr/include/bits/stdint-intn.h:
 
@@ -139,19 +166,15 @@ main: /usr/lib/Scrt1.o \
 
 /usr/include/gnu/stubs-64.h:
 
-/usr/include/bits/select.h:
-
-/usr/include/features-time64.h:
-
 /home/ziya/dev/main/musique/src/core.h:
 
 /usr/include/bits/libc-header-start.h:
 
-/usr/include/bits/types/__sigset_t.h:
-
 /usr/include/bits/timesize.h:
 
 /usr/include/bits/endian.h:
+
+/usr/include/bits/types/__sigset_t.h:
 
 /usr/lib/libraylib.so.6.0.0:
 
@@ -159,23 +182,19 @@ main: /usr/lib/Scrt1.o \
 
 /usr/include/bits/endianness.h:
 
-/usr/include/bits/atomic_wide_counter.h:
+/usr/include/bits/types/__FILE.h:
 
-/usr/include/bits/types/clockid_t.h:
+/usr/include/bits/stdlib-float.h:
 
-/home/ziya/dev/main/musique/src/main.c:
-
-/usr/include/bits/types/timer_t.h:
-
-/usr/include/bits/stdint-uintn.h:
-
-/usr/include/endian.h:
+/usr/include/bits/types/sigset_t.h:
 
 /usr/include/bits/floatn-common.h:
 
 /usr/include/bits/long-double.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdbool.h:
+/usr/include/bits/types/__fpos_t.h:
+
+/usr/include/bits/wordsize.h:
 
 /usr/include/stdc-predef.h:
 
@@ -185,7 +204,37 @@ main: /usr/lib/Scrt1.o \
 
 /usr/include/bits/pthreadtypes.h:
 
+/usr/include/bits/types/__mbstate_t.h:
+
+/usr/include/bits/types/clock_t.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/bits/types/clockid_t.h:
+
+/usr/include/bits/stdint-uintn.h:
+
+/usr/include/endian.h:
+
+/usr/include/bits/types/cookie_io_functions_t.h:
+
+/usr/include/bits/uintn-identity.h:
+
+/usr/include/bits/typesizes.h:
+
+/usr/lib32/libxcb.so.1:
+
+/usr/include/bits/types/struct_FILE.h:
+
+/usr/lib/libm.so.6:
+
+/usr/include/sys/select.h:
+
+/usr/include/bits/types/struct_timespec.h:
+
 /usr/lib32/libXdmcp.so.6:
+
+/usr/include/bits/stdio_lim.h:
 
 /usr/include/bits/types/struct_timeval.h:
 
@@ -195,48 +244,26 @@ main: /usr/lib/Scrt1.o \
 
 /usr/include/stdlib.h:
 
-/usr/include/bits/typesizes.h:
+/usr/lib32/libXau.so.6:
 
-/usr/include/bits/uintn-identity.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
 
-/usr/include/bits/wordsize.h:
-
-/usr/lib/crtn.o:
-
-/usr/include/bits/wchar.h:
+/usr/include/bits/waitstatus.h:
 
 /usr/include/features.h:
 
 /usr/include/gnu/stubs.h:
 
-/usr/lib32/libXau.so.6:
-
-/usr/include/bits/waitstatus.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
+/usr/include/bits/types/__fpos64_t.h:
 
 /usr/include/raylib.h:
 
 /usr/include/stdint.h:
 
-/usr/lib/libm.so.6:
+/home/ziya/dev/main/musique/src/main.c:
 
-/usr/include/sys/select.h:
+/usr/include/bits/types/timer_t.h:
+
+/usr/include/stdio.h:
 
 /usr/include/sys/types.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h:
-
-/usr/lib/Scrt1.o:
-
-CMakeFiles/main.dir/src/main.c.o:
-
-/usr/lib/crti.o:
-
-/usr/lib/libc.so:
-
-/usr/lib/libgcc_s.so:

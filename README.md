@@ -1,3 +1,3 @@
 # Musique
 
-# a music player gui wrapped around mpv
+A music player gui wrapped around mpv
