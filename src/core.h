@@ -7,4 +7,6 @@
 // external
 #include <raylib.h>
 
+#define RESOURCES_D "resources"
+
 typedef float f32;

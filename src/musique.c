@@ -10,7 +10,7 @@ void start()
     SetTargetFPS(60);
     InitAudioDevice();
 
-    music = LoadMusicStream("resources/song.mp3");
+    music = LoadMusicStream(RESOURCES_D"/song.mp3");
     if (music.stream.buffer == NULL) {
         printf("Failed to load music file!\n");
     }
