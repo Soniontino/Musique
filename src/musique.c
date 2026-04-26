@@ -1,6 +1,13 @@
 #include <math.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <fcntl.h>
+#include <unistd.h>
+#include <string.h>
+#include <sys/stat.h>
+#include <sys/types.h>
+#include <errno.h>
+
 #include "musique.h"
 
 Music music;
@@ -8,15 +15,24 @@ bool paused = false;
 bool muted = false;
 f32 volume = 1.0f;
 
+#define CMD_PIPE "/tmp/musique_cmd"
+
 float getAbsVol() {
     return muted ? 0.0f : volume;
 }
+
+int cmd_fd = -1;
+char cmd_buf[64];
 
 void start()
 {
     system("clear");
     SetTargetFPS(60);
     InitAudioDevice();
+
+    mkfifo(CMD_PIPE, 0666);
+
+    cmd_fd = open(CMD_PIPE, O_RDONLY | O_NONBLOCK);
 
     music = LoadMusicStream(RESOURCES_D "/song.mp3");
 
@@ -27,38 +43,45 @@ void start()
     PlayMusicStream(music);
 }
 
-void input()
+void handle_cmd(char *cmd)
 {
-    
-    if (IsKeyPressed(KEY_L)) {
-        printf("Time passed: %f\nVolume: %f\n\n", GetMusicTimePlayed(music), volume);
-    }
-
-    if (IsKeyTriggered(KEY_SPACE)) {
+    if (strncmp(cmd, "space", 5) == 0) {
         paused = !paused;
         if (paused) PauseMusicStream(music);
         else ResumeMusicStream(music);
     }
 
-    if (IsKeyTriggered(KEY_M)) {
+    else if (strncmp(cmd, "mute", 4) == 0) {
         muted = !muted;
     }
 
-    if (IsKeyTriggered(KEY_UP)) {
+    else if (strncmp(cmd, "up", 2) == 0) {
         volume += 0.02f;
     }
-    if (IsKeyTriggered(KEY_DOWN)) {
+
+    else if (strncmp(cmd, "down", 4) == 0) {
         volume -= 0.02f;
     }
 
-    if (IsKeyTriggered(KEY_LEFT)) {
+    else if (strncmp(cmd, "left", 4) == 0) {
         float amount = GetMusicTimePlayed(music) - 5.0f;
         SeekMusicStream(music, fmaxf(amount, 0.0f));
     }
-    if (IsKeyTriggered(KEY_RIGHT)) {
+
+    else if (strncmp(cmd, "right", 5) == 0) {
         float amount = GetMusicTimePlayed(music) + 5.0f;
         float total = GetMusicTimeLength(music);
         SeekMusicStream(music, fminf(amount, total));
+    }
+}
+
+void input()
+{
+    int n = read(cmd_fd, cmd_buf, sizeof(cmd_buf)-1);
+
+    if (n > 0) {
+        cmd_buf[n] = '\0';
+        handle_cmd(cmd_buf);
     }
 }
 
@@ -78,25 +101,13 @@ void render()
     float total  = GetMusicTimeLength(music);
     float progress = (total > 0) ? (played / total) : 0;
 
-    DrawText("SPACE = Play/Pause | M = Mute", 20, 20, 20, RAYWHITE);
-    DrawText("UP/DOWN = Volume", 20, 50, 20, RAYWHITE);
-    DrawText("LEFT/RIGHT = Seek", 20, 80, 20, RAYWHITE);
-
-    float barX = 20, barY = 120, barW = 600, barH = 20;
-    
-   
-    DrawRectangleRounded((Rectangle){barX, barY, barW, barH}, 0.5f, 10, DARKGRAY);
-    DrawRectangleRounded((Rectangle){barX, barY, barW * progress, barH}, 0.5f, 10, GREEN);
-
-    DrawText(TextFormat("%.1f / %.1f sec", played, total), 20, 150, 20, RAYWHITE);
-    DrawText(TextFormat("Volume: %.0f%% %s", volume * 100, muted ? "(MUTED)" : ""), 20, 180, 20, RAYWHITE);
-
-    if (paused) DrawText("PAUSED", 20, 210, 20, YELLOW);
-    else DrawText("PLAYING", 20, 210, 20, GREEN);
+    DrawText("RUST TUI CONTROLLING THIS", 20, 20, 20, RAYWHITE);
+    DrawRectangle(20, 60, 300 * progress, 20, GREEN);
 }
 
 void quit()
 {
     UnloadMusicStream(music);
     CloseAudioDevice();
+    close(cmd_fd);
 }
