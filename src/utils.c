@@ -1,6 +1,6 @@
 #include "utils.h"
 
-bool KeyHadPressing(int key)
+bool IsKeyTriggered(int key)
 {
     return IsKeyPressed(key) || IsKeyPressedRepeat(key);
 }

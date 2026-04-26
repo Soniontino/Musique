@@ -3,7 +3,8 @@
 BINARY="main"
 BUILD_DIR="build"
 OPTIMIZATION="-O0"
-FLAGS="-Wall -Wextra"
+C_FLAGS="-Wall -Wextra"
+CPP_FLAGS="-Wall -Wextra"
 BUILD_TYPE="Debug"
 
 PASSTHROUGH=()
@@ -31,7 +32,8 @@ mkdir -p "$BUILD_DIR"
 if [[ ! -f "$BUILD_DIR/CMakeCache.txt" ]]; then
     cmake_out=$(cmake -B "$BUILD_DIR"                        \
         -DCMAKE_BUILD_TYPE="$BUILD_TYPE"                     \
-        -DCMAKE_CXX_FLAGS="$OPTIMIZATION $FLAGS"             \
+        -DCMAKE_CXX_FLAGS="$OPTIMIZATION $C_FLAGS"           \
+        -DCMAKE_CXX_FLAGS="$OPTIMIZATION $CPP_FLAGS"         \
         -DCMAKE_EXPORT_COMPILE_COMMANDS=ON                   \
         2>&1)
 
