@@ -259,21 +259,15 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/asm/types.h \
   /usr/include/bits/atomic_wide_counter.h \
   /usr/include/bits/byteswap.h \
-  /usr/include/bits/confname.h \
   /usr/include/bits/cpu-set.h \
   /usr/include/bits/endian.h \
   /usr/include/bits/endianness.h \
-  /usr/include/bits/environments.h \
   /usr/include/bits/errno.h \
-  /usr/include/bits/fcntl-linux.h \
-  /usr/include/bits/fcntl.h \
   /usr/include/bits/floatn-common.h \
   /usr/include/bits/floatn.h \
   /usr/include/bits/flt-eval-method.h \
   /usr/include/bits/fp-fast.h \
   /usr/include/bits/fp-logb.h \
-  /usr/include/bits/getopt_core.h \
-  /usr/include/bits/getopt_posix.h \
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
@@ -284,17 +278,12 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/bits/mathcalls-macros.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
-  /usr/include/bits/openat2.h \
-  /usr/include/bits/posix_opt.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
   /usr/include/bits/sched.h \
   /usr/include/bits/select.h \
   /usr/include/bits/setjmp.h \
-  /usr/include/bits/stat.h \
-  /usr/include/bits/statx-generic.h \
-  /usr/include/bits/statx.h \
   /usr/include/bits/stdint-intn.h \
   /usr/include/bits/stdint-least.h \
   /usr/include/bits/stdint-uintn.h \
@@ -302,7 +291,6 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/bits/stdlib-float.h \
   /usr/include/bits/struct_mutex.h \
   /usr/include/bits/struct_rwlock.h \
-  /usr/include/bits/struct_stat.h \
   /usr/include/bits/thread-shared-types.h \
   /usr/include/bits/time.h \
   /usr/include/bits/time64.h \
@@ -325,11 +313,8 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/bits/types/sigset_t.h \
   /usr/include/bits/types/struct_FILE.h \
   /usr/include/bits/types/struct___jmp_buf_tag.h \
-  /usr/include/bits/types/struct_iovec.h \
   /usr/include/bits/types/struct_itimerspec.h \
   /usr/include/bits/types/struct_sched_param.h \
-  /usr/include/bits/types/struct_statx.h \
-  /usr/include/bits/types/struct_statx_timestamp.h \
   /usr/include/bits/types/struct_timespec.h \
   /usr/include/bits/types/struct_timeval.h \
   /usr/include/bits/types/struct_tm.h \
@@ -338,7 +323,6 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
-  /usr/include/bits/unistd_ext.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
@@ -434,7 +418,6 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/c++/15.2.1/ostream \
   /usr/include/c++/15.2.1/pstl/pstl_config.h \
   /usr/include/c++/15.2.1/stdexcept \
-  /usr/include/c++/15.2.1/stdlib.h \
   /usr/include/c++/15.2.1/streambuf \
   /usr/include/c++/15.2.1/string \
   /usr/include/c++/15.2.1/string_view \
@@ -468,18 +451,13 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/ctype.h \
   /usr/include/endian.h \
   /usr/include/errno.h \
-  /usr/include/fcntl.h \
   /usr/include/features-time64.h \
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
-  /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
-  /usr/include/linux/falloc.h \
-  /usr/include/linux/openat2.h \
   /usr/include/linux/posix_types.h \
   /usr/include/linux/sched/types.h \
-  /usr/include/linux/stat.h \
   /usr/include/linux/stddef.h \
   /usr/include/linux/types.h \
   /usr/include/locale.h \
@@ -496,10 +474,8 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
-  /usr/include/sys/stat.h \
   /usr/include/sys/types.h \
   /usr/include/time.h \
-  /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
@@ -787,6 +763,8 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/lib32/libX11.so.6:
 
+/usr/lib/libraylib.so.6.0.0:
+
 /usr/lib/libmvec.so.1:
 
 /usr/lib/libm.so.6:
@@ -794,46 +772,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/lib/libc_nonshared.a:
 
 /usr/lib/libc.so.6:
-
-/usr/lib/libXdmcp.so.6:
-
-/usr/lib/libXau.so.6:
-
-/usr/lib/libX11.so.6:
-
-/usr/lib/ld-linux-x86-64.so.2:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
-
-/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
-
-/usr/lib/libm.so:
-
-/usr/lib/libgcc_s.so.1:
-
-/usr/lib/crti.o:
-
-/usr/lib/Scrt1.o:
-
-/home/ziya/dev/main/musique/src/utils.cpp:
-
-/usr/include/unistd.h:
-
-/usr/include/sys/stat.h:
-
-/usr/include/linux/stat.h:
-
-/usr/include/linux/openat2.h:
-
-/usr/include/linux/close_range.h:
-
-/usr/lib/libraylib.so.6.0.0:
-
-/usr/include/fcntl.h:
-
-/usr/include/c++/15.2.1/stdlib.h:
 
 /usr/include/c++/15.2.1/bits/postypes.h:
 
@@ -859,7 +797,7 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/c++/15.2.1/cstdio:
 
-/usr/include/bits/stat.h:
+/usr/lib/ld-linux-x86-64.so.2:
 
 /usr/lib/libxcb.so.1:
 
@@ -870,6 +808,8 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/c++/15.2.1/bits/exception_ptr.h:
 
 /usr/include/c++/15.2.1/bits/cxxabi_init_exception.h:
+
+/usr/lib/libXdmcp.so.6:
 
 /usr/include/c++/15.2.1/bits/cxxabi_forced.h:
 
@@ -971,11 +911,15 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/bits/uintn-identity.h:
 
+/usr/lib/libXau.so.6:
+
 /usr/include/bits/endianness.h:
 
 /usr/include/c++/15.2.1/tr1/ell_integral.tcc:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/atomic_word.h:
+
+/home/ziya/dev/main/musique/src/utils.cpp:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/error_constants.h:
 
@@ -990,8 +934,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
 /usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/bits/posix_opt.h:
 
 /usr/include/bits/errno.h:
 
@@ -1017,9 +959,13 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/asm-generic/errno-base.h:
 
+/usr/lib/crti.o:
+
 /usr/include/c++/15.2.1/bits/cpp_type_traits.h:
 
 /home/ziya/dev/main/musique/src/musique.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtendS.o:
 
 /usr/include/c++/15.2.1/limits:
 
@@ -1029,13 +975,9 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/bits/struct_mutex.h:
 
-/usr/lib/libc.so:
-
-/usr/include/bits/pthreadtypes.h:
-
-/usr/include/c++/15.2.1/tr1/beta_function.tcc:
-
 /home/ziya/dev/main/musique/src/utils.h:
+
+/usr/include/bits/types/struct_FILE.h:
 
 /usr/include/asm/types.h:
 
@@ -1053,6 +995,8 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/asm-generic/posix_types.h:
 
+/usr/include/c++/15.2.1/bits/locale_classes.tcc:
+
 /usr/include/stdc-predef.h:
 
 /usr/include/c++/15.2.1/bit:
@@ -1062,6 +1006,8 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /home/ziya/dev/main/musique/src/core.h:
 
 /usr/include/bits/floatn.h:
+
+/usr/lib/Scrt1.o:
 
 /usr/include/bits/mathcalls-narrow.h:
 
@@ -1076,6 +1022,8 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/bits/select.h:
 
 /usr/include/bits/types/__fpos64_t.h:
+
+/usr/lib/libX11.so.6:
 
 /usr/include/bits/waitstatus.h:
 
@@ -1092,10 +1040,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/bits/types/clockid_t.h:
 
 /usr/include/bits/stdint-intn.h:
-
-/usr/lib/crtn.o:
-
-/usr/include/c++/15.2.1/bits/functional_hash.h:
 
 /usr/include/bits/types/cookie_io_functions_t.h:
 
@@ -1116,8 +1060,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/c++/15.2.1/bits/range_access.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/c++allocator.h:
-
-/usr/include/bits/struct_stat.h:
 
 /usr/include/c++/15.2.1/math.h:
 
@@ -1165,10 +1107,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/c++/15.2.1/bits/stl_iterator.h:
 
-/usr/include/bits/types/struct_FILE.h:
-
-/usr/include/bits/environments.h:
-
 /usr/include/c++/15.2.1/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/15.2.1/bits/streambuf_iterator.h:
@@ -1178,10 +1116,6 @@ CMakeFiles/main.dir/src/musique.cpp.o:
 /usr/include/bits/typesizes.h:
 
 /usr/include/c++/15.2.1/bits/string_view.tcc:
-
-/usr/lib/libstdc++.so:
-
-/usr/include/locale.h:
 
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/cpu_defines.h:
 
@@ -1201,10 +1135,6 @@ CMakeFiles/main.dir/src/musique.cpp.o:
 
 /usr/include/wchar.h:
 
-/usr/lib/libgcc_s.so:
-
-/usr/include/c++/15.2.1/cstddef:
-
 /usr/include/c++/15.2.1/cstdint:
 
 /usr/include/c++/15.2.1/cstring:
@@ -1217,8 +1147,6 @@ CMakeFiles/main.dir/src/musique.cpp.o:
 
 /usr/include/strings.h:
 
-/usr/include/bits/fcntl-linux.h:
-
 /usr/include/c++/15.2.1/debug/assertions.h:
 
 /usr/include/c++/15.2.1/new:
@@ -1228,6 +1156,14 @@ CMakeFiles/main.dir/src/musique.cpp.o:
 /usr/include/asm-generic/types.h:
 
 /usr/include/c++/15.2.1/exception:
+
+/usr/include/c++/15.2.1/tuple:
+
+/usr/include/errno.h:
+
+/usr/include/c++/15.2.1/ext/alloc_traits.h:
+
+/usr/include/c++/15.2.1/ext/numeric_traits.h:
 
 /usr/include/c++/15.2.1/initializer_list:
 
@@ -1327,38 +1263,30 @@ CMakeFiles/main.dir/src/musique.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h:
 
-/usr/include/c++/15.2.1/tuple:
-
-/usr/include/errno.h:
-
-/usr/include/bits/getopt_posix.h:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h:
 
-/usr/include/linux/falloc.h:
+/usr/include/c++/15.2.1/bits/functional_hash.h:
 
-/usr/include/c++/15.2.1/ext/alloc_traits.h:
+/usr/lib/crtn.o:
 
-/usr/include/bits/unistd_ext.h:
+/usr/include/bits/pthreadtypes.h:
 
-/usr/include/bits/confname.h:
+/usr/include/c++/15.2.1/tr1/beta_function.tcc:
 
-/usr/include/bits/fcntl.h:
+/usr/lib/libc.so:
 
-/usr/include/c++/15.2.1/ext/numeric_traits.h:
+/usr/include/c++/15.2.1/cstddef:
 
-/usr/include/bits/getopt_core.h:
+/usr/lib/libgcc_s.so:
 
-/usr/include/bits/openat2.h:
+/usr/lib/libgcc_s.so.1:
 
-/usr/include/bits/statx-generic.h:
+/usr/lib/libm.so:
 
-/usr/include/bits/statx.h:
+/usr/include/locale.h:
 
-/usr/include/bits/types/struct_iovec.h:
+/usr/lib/libstdc++.so:
 
-/usr/include/bits/types/struct_statx.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/crtbeginS.o:
 
-/usr/include/c++/15.2.1/bits/locale_classes.tcc:
-
-/usr/include/bits/types/struct_statx_timestamp.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/libgcc.a:
