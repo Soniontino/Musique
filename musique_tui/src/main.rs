@@ -1,7 +1,16 @@
 use ratatui::{prelude::*, widgets::*};
 use crossterm::event::{self, Event, KeyCode};
+use crossterm::{
+    execute,
+    terminal::{
+        enable_raw_mode,
+        disable_raw_mode,
+        EnterAlternateScreen,
+        LeaveAlternateScreen,
+    },
+};
 use std::fs::OpenOptions;
-use std::io::Write;
+use std::io::{Write, stdout};
 
 const PIPE: &str = "/tmp/musique_cmd";
 
@@ -12,20 +21,26 @@ fn send(cmd: &str) {
 }
 
 fn main() -> std::io::Result<()> {
-    crossterm::terminal::enable_raw_mode()?;
+    enable_raw_mode()?;
 
-    let mut terminal = ratatui::init();
+    let mut stdout = stdout();
+    execute!(stdout, EnterAlternateScreen)?;
+
+    let backend = CrosstermBackend::new(stdout);
+    let mut terminal = Terminal::new(backend)?;
 
     loop {
         terminal.draw(|f| {
             let area = f.size();
+
             let block = Block::default()
                 .title("Musique Controller")
                 .borders(Borders::ALL);
 
             let text = Paragraph::new(
                 "SPACE play/pause\nM mute\n↑ ↓ volume\n← → seek\nQ quit",
-            );
+            )
+            .block(Block::default());
 
             f.render_widget(block, area);
             f.render_widget(text, area);
@@ -50,7 +65,7 @@ fn main() -> std::io::Result<()> {
         }
     }
 
-    ratatui::restore();
-    crossterm::terminal::disable_raw_mode()?;
+    disable_raw_mode()?;
+    execute!(terminal.backend_mut(), LeaveAlternateScreen)?;
     Ok(())
 }
