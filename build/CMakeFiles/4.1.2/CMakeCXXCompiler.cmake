@@ -1,7 +1,7 @@
-set(CMAKE_CXX_COMPILER "/usr/bin/c++")
+set(CMAKE_CXX_COMPILER "/nix/store/kilyfvfmh9x9rlaj47ph1916lbc1pnsr-gcc-wrapper-14.3.0/bin/g++")
 set(CMAKE_CXX_COMPILER_ARG1 "")
 set(CMAKE_CXX_COMPILER_ID "GNU")
-set(CMAKE_CXX_COMPILER_VERSION "15.2.1")
+set(CMAKE_CXX_COMPILER_VERSION "14.3.0")
 set(CMAKE_CXX_COMPILER_VERSION_INTERNAL "")
 set(CMAKE_CXX_COMPILER_WRAPPER "")
 set(CMAKE_CXX_STANDARD_COMPUTED_DEFAULT "17")
@@ -25,17 +25,16 @@ set(CMAKE_CXX_COMPILER_ARCHITECTURE_ID "x86_64")
 
 
 
-
-set(CMAKE_AR "/usr/bin/ar")
-set(CMAKE_CXX_COMPILER_AR "/usr/bin/gcc-ar")
-set(CMAKE_RANLIB "/usr/bin/ranlib")
-set(CMAKE_CXX_COMPILER_RANLIB "/usr/bin/gcc-ranlib")
-set(CMAKE_LINKER "/usr/bin/ld")
+set(CMAKE_AR "/nix/store/kilyfvfmh9x9rlaj47ph1916lbc1pnsr-gcc-wrapper-14.3.0/bin/ar")
+set(CMAKE_CXX_COMPILER_AR "/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/bin/gcc-ar")
+set(CMAKE_RANLIB "/nix/store/kilyfvfmh9x9rlaj47ph1916lbc1pnsr-gcc-wrapper-14.3.0/bin/ranlib")
+set(CMAKE_CXX_COMPILER_RANLIB "/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/bin/gcc-ranlib")
+set(CMAKE_LINKER "/nix/store/kilyfvfmh9x9rlaj47ph1916lbc1pnsr-gcc-wrapper-14.3.0/bin/ld")
 set(CMAKE_LINKER_LINK "")
 set(CMAKE_LINKER_LLD "")
-set(CMAKE_CXX_COMPILER_LINKER "/usr/bin/ld")
+set(CMAKE_CXX_COMPILER_LINKER "/nix/store/hnan7l0v68sahyxbazz5y358prz253d1-binutils-wrapper-2.44/bin/ld")
 set(CMAKE_CXX_COMPILER_LINKER_ID "GNU")
-set(CMAKE_CXX_COMPILER_LINKER_VERSION 2.46)
+set(CMAKE_CXX_COMPILER_LINKER_VERSION 2.44)
 set(CMAKE_CXX_COMPILER_LINKER_FRONTEND_VARIANT GNU)
 set(CMAKE_MT "")
 set(CMAKE_TAPI "CMAKE_TAPI-NOTFOUND")
@@ -91,12 +90,19 @@ endif()
 
 
 
-set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/usr/include/c++/15.2.1;/usr/include/c++/15.2.1/x86_64-pc-linux-gnu;/usr/include/c++/15.2.1/backward;/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include;/usr/local/include;/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include-fixed;/usr/include")
+set(CMAKE_CXX_IMPLICIT_INCLUDE_DIRECTORIES "/nix/store/4k2jvaryhgfir2hs9rvwfym7557p72pn-raylib-5.5-unstable-2026-01-20/include;/nix/store/4yq2adjfxdkj5rgrwbm16vwnvxa7i3bq-glu-9.0.3-dev/include;/nix/store/39hqrv8wsf9p24dypwk8z3x4ccgqggh4-libglvnd-1.7.0-dev/include;/nix/store/bs2isdz1s1xv622zk5drn2aa7vyq8qrp-libx11-1.8.12-dev/include;/nix/store/jx7hk27qxykfanlwil7wbcz62mcz7wd5-xorgproto-2024.1/include;/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/include/c++/14.3.0;/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/include/c++/14.3.0/x86_64-unknown-linux-gnu;/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/include/c++/14.3.0/backward;/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include;/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/include;/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0/include-fixed;/nix/store/903kx9pwhyzswmx1caf7rc8idram9vdq-glibc-2.40-218-dev/include")
 set(CMAKE_CXX_IMPLICIT_LINK_LIBRARIES "stdc++;m;gcc_s;gcc;c;gcc_s;gcc")
-set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1;/usr/lib;/lib")
+set(CMAKE_CXX_IMPLICIT_LINK_DIRECTORIES "/nix/store/4k2jvaryhgfir2hs9rvwfym7557p72pn-raylib-5.5-unstable-2026-01-20/lib;/nix/store/39fgb5pr1r6k3szvfhpfmv9jp829kisx-libglvnd-1.7.0/lib;/nix/store/196psj4d709f57vv7l323gdk426qf3lh-glu-9.0.3/lib;/nix/store/6an80jglfqg4gkiyl87wxwa2zcplwn2f-libx11-1.8.12/lib;/nix/store/pdwlyjkmc6icc0wb5gaw08m9ynqrg683-glibc-2.40-218/lib;/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/lib/gcc/x86_64-unknown-linux-gnu/14.3.0;/nix/store/1xw5xccqqh1xw3mvd70hyil6x418wxcm-gcc-14.3.0-lib/lib;/nix/store/06409a3d2d3b1113zdk9rm5a3ns4rizz-gcc-14.3.0/lib")
 set(CMAKE_CXX_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")
 set(CMAKE_CXX_COMPILER_CLANG_RESOURCE_DIR "")
 
 set(CMAKE_CXX_COMPILER_IMPORT_STD "")
-set(CMAKE_CXX_COMPILER_IMPORT_STD_ERROR_MESSAGE  "Unsupported generator: Unix Makefiles")
-set(CMAKE_CXX_STDLIB_MODULES_JSON "")
+### Imported target for C++23 standard library
+set(CMAKE_CXX23_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Unsupported generator: Unix Makefiles")
+
+
+### Imported target for C++26 standard library
+set(CMAKE_CXX26_COMPILER_IMPORT_STD_NOT_FOUND_MESSAGE "Unsupported generator: Unix Makefiles")
+
+
+
