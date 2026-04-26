@@ -42,7 +42,7 @@ void start()
         perror("open fifo");
     }
 
-    music = LoadMusicStream("../resources/song.mp3");
+    music = LoadMusicStream(RESOURCES_D "/song.mp3");
 
     if (music.frameCount == 0) {
         printf("Failed to load music file!\n");
