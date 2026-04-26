@@ -1,7 +1,12 @@
 #include "musique.h"
 
-int main(void)
+int main(int argc, char* argv[])
 {
+    if (argc == 1) {
+        
+    }
+
+    SetConfigFlags(FLAG_WINDOW_RESIZABLE);
     InitWindow(1080, 640, "Musique");
     SetTargetFPS(60);
 

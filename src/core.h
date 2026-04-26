@@ -1,12 +1,11 @@
 #pragma once
-#include <stdbool.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <stdint.h>
-#include <math.h>
+#include <iostream>
+#include <cstdlib>
+#include <cstdint>
+#include <cmath>
 // external
 #include <raylib.h>
 
 #define RESOURCES_D "resources"
 
-typedef float f32;
+using f32 = float;
