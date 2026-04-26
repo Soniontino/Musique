@@ -1,20 +1,20 @@
 [
 {
   "directory": "/home/ziya/dev/main/musique/build",
-  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -g -std=gnu11 -o CMakeFiles/main.dir/src/main.c.o -c /home/ziya/dev/main/musique/src/main.c",
-  "file": "/home/ziya/dev/main/musique/src/main.c",
-  "output": "CMakeFiles/main.dir/src/main.c.o"
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -O0 -Wall -Wextra -g -o CMakeFiles/main.dir/src/main.cpp.o -c /home/ziya/dev/main/musique/src/main.cpp",
+  "file": "/home/ziya/dev/main/musique/src/main.cpp",
+  "output": "CMakeFiles/main.dir/src/main.cpp.o"
 },
 {
   "directory": "/home/ziya/dev/main/musique/build",
-  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -g -std=gnu11 -o CMakeFiles/main.dir/src/musique.c.o -c /home/ziya/dev/main/musique/src/musique.c",
-  "file": "/home/ziya/dev/main/musique/src/musique.c",
-  "output": "CMakeFiles/main.dir/src/musique.c.o"
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -O0 -Wall -Wextra -g -o CMakeFiles/main.dir/src/musique.cpp.o -c /home/ziya/dev/main/musique/src/musique.cpp",
+  "file": "/home/ziya/dev/main/musique/src/musique.cpp",
+  "output": "CMakeFiles/main.dir/src/musique.cpp.o"
 },
 {
   "directory": "/home/ziya/dev/main/musique/build",
-  "command": "/usr/bin/cc -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -g -std=gnu11 -o CMakeFiles/main.dir/src/utils.c.o -c /home/ziya/dev/main/musique/src/utils.c",
-  "file": "/home/ziya/dev/main/musique/src/utils.c",
-  "output": "CMakeFiles/main.dir/src/utils.c.o"
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -O0 -Wall -Wextra -g -o CMakeFiles/main.dir/src/utils.cpp.o -c /home/ziya/dev/main/musique/src/utils.cpp",
+  "file": "/home/ziya/dev/main/musique/src/utils.cpp",
+  "output": "CMakeFiles/main.dir/src/utils.cpp.o"
 }
 ]

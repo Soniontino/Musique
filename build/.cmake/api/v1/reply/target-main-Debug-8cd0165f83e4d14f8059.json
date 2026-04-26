@@ -85,7 +85,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -std=gnu11"
+					"fragment" : "-O0 -Wall -Wextra -g"
 				}
 			],
 			"defines" : 
@@ -103,15 +103,7 @@
 					"define" : "USE_LIBTYPE_SHARED"
 				}
 			],
-			"language" : "C",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					1
-				],
-				"standard" : "11"
-			},
+			"language" : "CXX",
 			"sourceIndexes" : 
 			[
 				0,
@@ -126,7 +118,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
+				"fragment" : "-O0 -Wall -Wextra -g",
 				"role" : "flags"
 			},
 			{
@@ -140,7 +132,7 @@
 				"role" : "libraries"
 			}
 		],
-		"language" : "C"
+		"language" : "CXX"
 	},
 	"linkLibraries" : 
 	[
@@ -173,19 +165,19 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/main.c",
+			"path" : "src/main.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/musique.c",
+			"path" : "src/musique.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "src/utils.c",
+			"path" : "src/utils.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

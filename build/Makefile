@@ -129,77 +129,77 @@ main/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/build
 .PHONY : main/fast
 
-src/main.o: src/main.c.o
+src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
-src/main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.o
-.PHONY : src/main.c.o
+src/main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.o
+.PHONY : src/main.cpp.o
 
-src/main.i: src/main.c.i
+src/main.i: src/main.cpp.i
 .PHONY : src/main.i
 
 # target to preprocess a source file
-src/main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.i
-.PHONY : src/main.c.i
+src/main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.i
+.PHONY : src/main.cpp.i
 
-src/main.s: src/main.c.s
+src/main.s: src/main.cpp.s
 .PHONY : src/main.s
 
 # target to generate assembly for a file
-src/main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.c.s
-.PHONY : src/main.c.s
+src/main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
+.PHONY : src/main.cpp.s
 
-src/musique.o: src/musique.c.o
+src/musique.o: src/musique.cpp.o
 .PHONY : src/musique.o
 
 # target to build an object file
-src/musique.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.c.o
-.PHONY : src/musique.c.o
+src/musique.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.cpp.o
+.PHONY : src/musique.cpp.o
 
-src/musique.i: src/musique.c.i
+src/musique.i: src/musique.cpp.i
 .PHONY : src/musique.i
 
 # target to preprocess a source file
-src/musique.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.c.i
-.PHONY : src/musique.c.i
+src/musique.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.cpp.i
+.PHONY : src/musique.cpp.i
 
-src/musique.s: src/musique.c.s
+src/musique.s: src/musique.cpp.s
 .PHONY : src/musique.s
 
 # target to generate assembly for a file
-src/musique.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.c.s
-.PHONY : src/musique.c.s
+src/musique.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/musique.cpp.s
+.PHONY : src/musique.cpp.s
 
-src/utils.o: src/utils.c.o
+src/utils.o: src/utils.cpp.o
 .PHONY : src/utils.o
 
 # target to build an object file
-src/utils.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.c.o
-.PHONY : src/utils.c.o
+src/utils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.cpp.o
+.PHONY : src/utils.cpp.o
 
-src/utils.i: src/utils.c.i
+src/utils.i: src/utils.cpp.i
 .PHONY : src/utils.i
 
 # target to preprocess a source file
-src/utils.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.c.i
-.PHONY : src/utils.c.i
+src/utils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.cpp.i
+.PHONY : src/utils.cpp.i
 
-src/utils.s: src/utils.c.s
+src/utils.s: src/utils.cpp.s
 .PHONY : src/utils.s
 
 # target to generate assembly for a file
-src/utils.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.c.s
-.PHONY : src/utils.c.s
+src/utils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/utils.cpp.s
+.PHONY : src/utils.cpp.s
 
 # Help Target
 help:

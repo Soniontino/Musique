@@ -6,7 +6,7 @@ set(CMAKE_C_STANDARD 11)
 
 find_package(raylib REQUIRED)
 
-file(GLOB_RECURSE SOURCES "src/*.c")
+file(GLOB_RECURSE SOURCES "src/*.cpp")
 add_executable(main ${SOURCES})
 
 target_link_libraries(main PRIVATE raylib)
