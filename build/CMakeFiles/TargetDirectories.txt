@@ -1,0 +1,3 @@
+/home/cat/Musique/build/CMakeFiles/main.dir
+/home/cat/Musique/build/CMakeFiles/edit_cache.dir
+/home/cat/Musique/build/CMakeFiles/rebuild_cache.dir
