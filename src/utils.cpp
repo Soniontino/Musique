@@ -1,4 +1,4 @@
-#include "utils.h"
+#include "utils.hpp"
 
 bool IsKeyTriggered(int key)
 {

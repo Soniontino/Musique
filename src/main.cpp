@@ -1,4 +1,4 @@
-#include "musique.h"
+#include "musique.hpp"
 
 int main(int argc, char* argv[])
 {

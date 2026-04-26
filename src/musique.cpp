@@ -1,20 +1,26 @@
 #include <math.h>
 #include <stdio.h>
 #include <cstdlib>
-#include <string.h>
-#include "musique.h"
+// #include <cstring>
+#include "musique.hpp"
 
-Music music;
-bool paused = false;
-bool muted = false;
-f32 volume = 1.0f;
+void Musique::loadFile(const strview& path)
+{
+    auto build_str = string(RESOURCES_D) + string(path.data());
+    music = LoadMusicStream(build_str.data());
+}
+
+f32 Musique::AbsVol()
+{
+    return (muted)? (0.0f):(volume);
+}
 
 void Musique::start()
 {
     system("clear");
     InitAudioDevice();
 
-    music = LoadMusicStream(RESOURCES_D "/song.mp3");
+    loadFile("song.mp3");
 
     if (music.frameCount == 0) {
         printf("Failed to load music file!\n");
@@ -26,17 +32,36 @@ void Musique::start()
 
 void Musique::input()
 {
-    
+    if (IsKeyTriggered(KEY_SPACE)) {
+        playing = !playing;
+    }
+    else if (IsKeyTriggered(KEY_M)) {
+        muted = !muted;
+    }
 }
 
 void Musique::update()
 {
     UpdateMusicStream(music);
 
-    if (volume > 1.0f) volume = 1.0f;
-    if (volume < 0.0f) volume = 0.0f;
+    volume = std::min(volume, 1.0f);
+    volume = std::max(volume, 0.0f);
 
-    SetMusicVolume(music, 10);
+    SetMusicVolume(music, AbsVol());
+
+    if (playing) {
+        if (!IsMusicStreamPlaying(music)) {
+            ResumeMusicStream(music);
+        }
+    } else {
+        if (IsMusicStreamPlaying(music)) {
+            PauseMusicStream(music);
+        }
+    }
+
+    if (muted) {
+        SetMusicVolume(music, AbsVol());
+    }
 }
 
 void Musique::render()
@@ -54,8 +79,8 @@ void Musique::render()
     DrawText(TextFormat("%.1f / %.1f", played, total), 20, 90, 20, RAYWHITE);
     DrawText(TextFormat("Vol: %.0f%% %s", volume * 100, muted ? "(MUTED)" : ""), 20, 120, 20, RAYWHITE);
 
-    if (paused) DrawText("PAUSED", 20, 150, 20, YELLOW);
-    else DrawText("PLAYING", 20, 150, 20, GREEN);
+    if (playing) DrawText("PLAYING", 20, 150, 20, YELLOW);
+    else DrawText("PAUSED", 20, 150, 20, GREEN);
 }
 
 void Musique::quit()

@@ -76,9 +76,8 @@ CMakeFiles/main.dir/src/musique.cpp.o: \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/struct_FILE.h \
  /usr/include/bits/types/cookie_io_functions_t.h \
  /usr/include/bits/stdio_lim.h /usr/include/c++/15.2.1/cstdlib \
- /usr/include/string.h /usr/include/strings.h \
- /home/ziya/dev/main/musique/src/musique.h \
- /home/ziya/dev/main/musique/src/utils.h \
+ /home/ziya/dev/main/musique/src/musique.hpp \
+ /home/ziya/dev/main/musique/src/utils.hpp \
  /home/ziya/dev/main/musique/src/core.h /usr/include/c++/15.2.1/iostream \
  /usr/include/c++/15.2.1/ostream /usr/include/c++/15.2.1/bits/ostream.h \
  /usr/include/c++/15.2.1/ios /usr/include/c++/15.2.1/iosfwd \
@@ -165,8 +164,5 @@ CMakeFiles/main.dir/src/musique.cpp.o: \
  /usr/include/c++/15.2.1/bits/locale_facets.tcc \
  /usr/include/c++/15.2.1/bits/basic_ios.tcc \
  /usr/include/c++/15.2.1/bits/ostream.tcc /usr/include/c++/15.2.1/istream \
- /usr/include/c++/15.2.1/bits/istream.tcc /usr/include/c++/15.2.1/cstdint \
- /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/c++/15.2.1/cstring \
- /usr/include/raylib.h
+ /usr/include/c++/15.2.1/bits/istream.tcc /usr/include/c++/15.2.1/cstring \
+ /usr/include/string.h /usr/include/strings.h /usr/include/raylib.h
