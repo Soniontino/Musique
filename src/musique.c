@@ -8,7 +8,6 @@ bool paused = false;
 bool muted = false;
 f32 volume = 1.0f;
 
-// Helper to get volume based on the mute state
 float getAbsVol() {
     return muted ? 0.0f : volume;
 }
@@ -30,24 +29,21 @@ void start()
 
 void input()
 {
-    // Log info
+    
     if (IsKeyPressed(KEY_L)) {
         printf("Time passed: %f\nVolume: %f\n\n", GetMusicTimePlayed(music), volume);
     }
 
-    // Play/Pause toggle
     if (IsKeyTriggered(KEY_SPACE)) {
         paused = !paused;
         if (paused) PauseMusicStream(music);
         else ResumeMusicStream(music);
     }
 
-    // Mute toggle
     if (IsKeyTriggered(KEY_M)) {
         muted = !muted;
     }
 
-    // Volume Control
     if (IsKeyTriggered(KEY_UP)) {
         volume += 0.02f;
     }
@@ -55,7 +51,6 @@ void input()
         volume -= 0.02f;
     }
 
-    // Seek Controls
     if (IsKeyTriggered(KEY_LEFT)) {
         float amount = GetMusicTimePlayed(music) - 5.0f;
         SeekMusicStream(music, fmaxf(amount, 0.0f));
@@ -71,11 +66,9 @@ void update()
 {
     UpdateMusicStream(music);
 
-    // Clamp volume between 0 and 1
     if (volume > 1.0f) volume = 1.0f;
     if (volume < 0.0f) volume = 0.0f;
 
-    // Apply volume (considering mute state)
     SetMusicVolume(music, getAbsVol());
 }
 
@@ -89,12 +82,10 @@ void render()
     DrawText("UP/DOWN = Volume", 20, 50, 20, RAYWHITE);
     DrawText("LEFT/RIGHT = Seek", 20, 80, 20, RAYWHITE);
 
-    // Audio duration bar
     float barX = 20, barY = 120, barW = 600, barH = 20;
     
-    // Background bar
+   
     DrawRectangleRounded((Rectangle){barX, barY, barW, barH}, 0.5f, 10, DARKGRAY);
-    // Progress bar
     DrawRectangleRounded((Rectangle){barX, barY, barW * progress, barH}, 0.5f, 10, GREEN);
 
     DrawText(TextFormat("%.1f / %.1f sec", played, total), 20, 150, 20, RAYWHITE);
