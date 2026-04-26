@@ -1,4 +1,5 @@
 # Musique
 
-## A music player gui wrapped around mpv
-We are charlie kirrrkkkk we carry the flames
+### GUI Music Player
+Simple GUI music player written in c.
+It uses MPV as backend.
