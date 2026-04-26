@@ -156,6 +156,7 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/ziya/dev/main/musique/src/main.cpp \
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -227,6 +228,8 @@ CMakeFiles/main.dir/src/main.cpp.o: /home/ziya/dev/main/musique/src/main.cpp \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -409,6 +412,7 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -656,6 +660,7 @@ CMakeFiles/main.dir/src/utils.cpp.o: /home/ziya/dev/main/musique/src/utils.cpp \
   /usr/include/c++/15.2.1/cstdint \
   /usr/include/c++/15.2.1/cstdio \
   /usr/include/c++/15.2.1/cstdlib \
+  /usr/include/c++/15.2.1/cstring \
   /usr/include/c++/15.2.1/cwchar \
   /usr/include/c++/15.2.1/cwctype \
   /usr/include/c++/15.2.1/debug/assertions.h \
@@ -727,6 +732,8 @@ CMakeFiles/main.dir/src/utils.cpp.o: /home/ziya/dev/main/musique/src/utils.cpp \
   /usr/include/stdint.h \
   /usr/include/stdio.h \
   /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
   /usr/include/sys/cdefs.h \
   /usr/include/sys/select.h \
   /usr/include/sys/single_threaded.h \
@@ -816,11 +823,17 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/sys/stat.h:
 
-/usr/include/string.h:
-
 /usr/include/linux/stat.h:
 
 /usr/include/linux/openat2.h:
+
+/usr/include/linux/close_range.h:
+
+/usr/lib/libraylib.so.6.0.0:
+
+/usr/include/fcntl.h:
+
+/usr/include/c++/15.2.1/stdlib.h:
 
 /usr/include/c++/15.2.1/bits/postypes.h:
 
@@ -958,8 +971,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/bits/uintn-identity.h:
 
-/usr/include/c++/15.2.1/stdlib.h:
-
 /usr/include/bits/endianness.h:
 
 /usr/include/c++/15.2.1/tr1/ell_integral.tcc:
@@ -1042,10 +1053,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/asm-generic/posix_types.h:
 
-/usr/include/strings.h:
-
-/usr/include/c++/15.2.1/tr1/poly_laguerre.tcc:
-
 /usr/include/stdc-predef.h:
 
 /usr/include/c++/15.2.1/bit:
@@ -1066,10 +1073,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/gnu/stubs.h:
 
-/usr/lib/libraylib.so.6.0.0:
-
-/usr/include/fcntl.h:
-
 /usr/include/bits/select.h:
 
 /usr/include/bits/types/__fpos64_t.h:
@@ -1089,8 +1092,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/bits/types/clockid_t.h:
 
 /usr/include/bits/stdint-intn.h:
-
-/usr/include/linux/close_range.h:
 
 /usr/lib/crtn.o:
 
@@ -1123,6 +1124,8 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/c++/15.2.1/bits/charconv.h:
 
 /usr/include/bits/mathcalls-helper-functions.h:
+
+/usr/include/string.h:
 
 /usr/include/c++/15.2.1/ios:
 
@@ -1204,9 +1207,15 @@ CMakeFiles/main.dir/src/musique.cpp.o:
 
 /usr/include/c++/15.2.1/cstdint:
 
+/usr/include/c++/15.2.1/cstring:
+
 /usr/include/c++/15.2.1/cwctype:
 
 /usr/include/c++/15.2.1/istream:
+
+/usr/include/c++/15.2.1/tr1/poly_laguerre.tcc:
+
+/usr/include/strings.h:
 
 /usr/include/bits/fcntl-linux.h:
 

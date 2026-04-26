@@ -167,4 +167,6 @@ CMakeFiles/main.dir/src/utils.cpp.o: \
  /usr/include/c++/15.2.1/tr1/modified_bessel_func.tcc \
  /usr/include/c++/15.2.1/tr1/poly_hermite.tcc \
  /usr/include/c++/15.2.1/tr1/poly_laguerre.tcc \
- /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc /usr/include/raylib.h
+ /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc \
+ /usr/include/c++/15.2.1/cstring /usr/include/string.h \
+ /usr/include/strings.h /usr/include/raylib.h

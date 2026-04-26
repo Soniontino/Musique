@@ -180,4 +180,5 @@ CMakeFiles/main.dir/src/musique.cpp.o: \
  /usr/include/c++/15.2.1/bits/istream.tcc /usr/include/c++/15.2.1/cstdint \
  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/raylib.h
+ /usr/include/bits/stdint-least.h /usr/include/c++/15.2.1/cstring \
+ /usr/include/raylib.h
