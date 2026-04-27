@@ -74,12 +74,11 @@ void Musique::render()
 {
     float progress = (duration.max > 0) ? (duration.now / duration.max) : 0;
 
-    DrawText("RUST AINT CONTROLLING SHI", 20, 20, 20, RAYWHITE);
-
     // ben yapiyom bunu amk degistirme guzel gozukuyo hep sunu kullaniyom
     DrawRectangleRounded({20, 60, 300, 20}, 0.75, 20, DARKGRAY);
     DrawRectangleRounded({20, 60, (300*progress), 20}, 0.75, 20, GREEN);
 
+    DrawText("RUST AINT CONTROLLING SHI", 20, 20, 20, RAYWHITE);
     DrawText(TextFormat("%.1f / %.1f", duration.now, duration.max), 20, 90, 20, RAYWHITE);
     DrawText(TextFormat("Vol: %.0f%% %s", volume * 100, muted ? "(MUTED)" : ""), 20, 120, 20, RAYWHITE);
 

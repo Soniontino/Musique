@@ -14,5 +14,5 @@ inline bool IsKeyTriggered(int key)
 template <class... T>
 inline void Mprint(T... stream)
 {
-    (std::cerr << (..., stream) << std::flush);
+    (std::cerr << ... << stream) << std::flush;
 }

@@ -25,10 +25,10 @@ int main(int argc, char* argv[])
     while (!WindowShouldClose()) {
         rt::dt = GetFrameTime();
         if (IsKeyTriggered(KEY_SLASH)) {
-            std::cerr
-            << "fps: " << 1.0f/rt::dt << "\n"
-            << "dur: " << musique.duration.now << "\n"
-            << std::endl;
+            Mprint(
+                "fps: ", 1.0f/rt::dt, "\n",
+                "dur: ", musique.duration.now, "\n"
+            "\n");
         }
         musique.input();
         musique.update();
