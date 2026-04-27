@@ -35,7 +35,7 @@ void Musique::start()
 
 void Musique::input()
 {
-    if (IsKeyTriggered(KEY_SPACE)) {
+    if (IsKeyTriggered(KEY_SPACE) || IsMouseButtonPressed(0)) {
         playing = !playing;
     }
     else if (IsKeyTriggered(KEY_M)) {
