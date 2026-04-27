@@ -1,11 +1,18 @@
 #pragma once
 #include "core.h"
 
-bool IsKeyTriggered(int key);
+inline bool PerNFrame(f64 n)
+{
+    return fmod(GetTime(), n) < GetFrameTime();
+}
 
-// template fn-ler .hpp-de olmali bu arada
+inline bool IsKeyTriggered(int key)
+{
+    return IsKeyPressed(key) || IsKeyPressedRepeat(key);
+}
+
 template <class... T>
-void mprint(T... stream)
+inline void Mprint(T... stream)
 {
     (std::cerr << (..., stream) << std::flush);
 }

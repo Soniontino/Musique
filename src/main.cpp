@@ -23,6 +23,13 @@ int main(int argc, char* argv[])
 
     musique.start();
     while (!WindowShouldClose()) {
+        rt::dt = GetFrameTime();
+        if (IsKeyTriggered(KEY_SLASH)) {
+            std::cerr
+            << "fps: " << 1.0f/rt::dt << "\n"
+            << "dur: " << musique.duration.now << "\n"
+            << std::endl;
+        }
         musique.input();
         musique.update();
         BeginDrawing();

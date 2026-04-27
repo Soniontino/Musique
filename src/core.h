@@ -3,8 +3,8 @@
 #include <cstdlib>
 #include <cstring>
 // #include <cstdint>
-// #include <cmath>
-// #include <algorithm>
+#include <cmath>
+#include <algorithm>
 // external
 #include <raylib.h>
 
@@ -18,5 +18,6 @@
     !strcmp(_s1, _s2)
 
 using f32 = float;
+using f64 = double;
 using strview = std::string_view;
 using string = std::string;
