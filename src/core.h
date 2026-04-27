@@ -7,6 +7,7 @@
 #include <algorithm>
 // external
 #include <raylib.h>
+#include "mpv/client.h"
 
 #define RESOURCES_D "resources/"
 

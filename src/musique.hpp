@@ -7,6 +7,8 @@ namespace config {
 }
 namespace rt {  // rt = runtime
     inline f32 dt = 0;
+    inline f32 win_w = config::win_width_ini;
+    inline f32 win_h = config::win_height_ini;
 }
 
 struct Musique

@@ -35,22 +35,30 @@ void Musique::start()
 
 void Musique::input()
 {
-    if (IsKeyTriggered(KEY_SPACE) || IsMouseButtonPressed(0)) {
+    const auto& mouseX = GetMouseX();
+    const auto mouseY = GetMouseY();
+
+    if (IsKeyTriggered(KEY_SPACE)
+        || (IsMouseButtonPressed(0) && (mouseX<(rt::win_w*0.75) && mouseX>(rt::win_w*0.25)))
+    ){
         playing = !playing;
     }
+
     else if (IsKeyTriggered(KEY_M)) {
         muted = !muted;
     }
 
-    else if (IsKeyTriggered(KEY_LEFT)) {
+    else if (IsKeyTriggered(KEY_LEFT) || (IsMouseDoubleClicked() && mouseX<rt::win_w*0.75)) {
         seek(-5);
-    } else if (IsKeyTriggered(KEY_RIGHT)) {
+    }
+    else if (IsKeyTriggered(KEY_RIGHT) || (IsMouseDoubleClicked() && mouseX>rt::win_w*0.25)) {
         seek(+5);
     }
 
     else if (IsKeyTriggered(KEY_DOWN)) {
         volume += -0.02;
-    } else if (IsKeyTriggered(KEY_UP)) {
+    }
+    else if (IsKeyTriggered(KEY_UP)) {
         volume += +0.02;
     }
 }
