@@ -5,9 +5,9 @@
 // #include <cstdint>
 #include <cmath>
 #include <algorithm>
+#include <format>
 // external
 #include <raylib.h>
-#include "mpv/client.h"
 
 #define RESOURCES_D "resources/"
 
@@ -17,6 +17,9 @@
 // equal-string check
 #define EQS(_s1, _s2) \
     !strcmp(_s1, _s2)
+
+#define M_TRY(_stmt_expr, _else_exec) \
+    if(!(_stmt_expr)) {_else_exec}
 
 using f32 = float;
 using f64 = double;

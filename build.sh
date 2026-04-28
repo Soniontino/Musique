@@ -47,7 +47,7 @@ if [[ ! -f "$BUILD_DIR/CMakeCache.txt" ]]; then
 fi
 
 # Build
-cmake --build "$BUILD_DIR" -j"$(nproc)"
+cmake --build "$BUILD_DIR" -j"$(($(nproc)/2))"
 
 if [[ $? -ne 0 ]]; then
     echo "Build failed."

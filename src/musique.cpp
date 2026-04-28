@@ -1,36 +1,23 @@
 #include "musique.hpp"
 
+Musique::Musique()
+{
+    ;
+}
+
 void Musique::loadFile(const strview& path, bool play)
 {
-    auto build_str = string(RESOURCES_D) + string(path.data());
-    music = LoadMusicStream(build_str.data());
-    if (music.stream.buffer == nullptr) {
-        throw std::runtime_error("Failed to load music file!");
-    }
-    duration.now = 0;
-    duration.max = GetMusicTimeLength(music);
-
-    if (play) PlayMusicStream(music);
+    auto build_str = std::format("{}/{}", RESOURCES_D, path);
+    audio.load(build_str.data());
+    audio.setPlaying(play);
 }
-
-f32 Musique::AbsVol()
-{
-    return (muted)? (0.0f):(volume);
-}
-
-void Musique::seek(f32 seconds)
-{
-    duration.now = std::clamp(duration.now + seconds, 0.0f, duration.max);
-    SeekMusicStream(music, duration.now);
-}
-
 
 void Musique::start()
 {
-    system("clear");
-    InitAudioDevice();
+    audio.init();
 
-    try {loadFile("song.mp3");} catch(std::exception&){CloseAudioDevice(); throw;}
+    try { loadFile("song.mp3"); }
+    catch (std::exception&) { audio.destroy(); throw; }
 }
 
 void Musique::input()
@@ -41,7 +28,7 @@ void Musique::input()
     if (IsKeyTriggered(KEY_SPACE)
         || (IsMouseButtonPressed(0) && (mouseX<(rt::win_w*0.75) && mouseX>(rt::win_w*0.25)))
     ){
-        playing = !playing;
+        playing.now = !playing.now;
     }
 
     else if (IsKeyTriggered(KEY_M)) {
@@ -49,53 +36,57 @@ void Musique::input()
     }
 
     else if (IsKeyTriggered(KEY_LEFT) || (IsMouseDoubleClicked() && mouseX<rt::win_w*0.75)) {
-        seek(-5);
+        audio.seek(-5);
     }
     else if (IsKeyTriggered(KEY_RIGHT) || (IsMouseDoubleClicked() && mouseX>rt::win_w*0.25)) {
-        seek(+5);
+        audio.seek(+5);
     }
 
     else if (IsKeyTriggered(KEY_DOWN)) {
-        volume += -0.02;
+        volume += -2;
     }
     else if (IsKeyTriggered(KEY_UP)) {
-        volume += +0.02;
+        volume += +2;
     }
 }
 
 void Musique::update()
 {
-    UpdateMusicStream(music);
-    volume = std::clamp(volume, 0.0f, 1.0f);
+    duration.max = audio.getDuration();
+    duration.now = std::clamp(audio.getTimePoint(), 0.0, duration.max);
 
-    if (playing && !IsMusicStreamPlaying(music)) {
-        ResumeMusicStream(music);
-    } else if (!playing && IsMusicStreamPlaying(music)) {
-        PauseMusicStream(music);
+    volume = std::clamp(volume, 0.0, 100.0);
+    audio.setVolume(muted? 0.0:volume);
+
+    if (playing.now != playing.prev) {
+        audio.setPlaying(playing.now);
+        playing.prev = playing.now;
     }
 
-    duration.now = GetMusicTimePlayed(music);
-    SetMusicVolume(music, AbsVol());
+    if (duration.now>duration.max*0.9 && audio.isEnded()) {
+        playing.now = false;
+        playing.prev = false;
+        duration.now = 0;
+    }
 }
 
 void Musique::render()
 {
-    float progress = (duration.max > 0) ? (duration.now / duration.max) : 0;
+    f64 progress = (duration.max > 0) ? (duration.now / duration.max) : 0;
 
     // ben yapiyom bunu amk degistirme guzel gozukuyo hep sunu kullaniyom
     DrawRectangleRounded({20, 60, 300, 20}, 0.75, 20, DARKGRAY);
-    DrawRectangleRounded({20, 60, (300*progress), 20}, 0.75, 20, GREEN);
+    DrawRectangleRounded({20, 60, (300*(f32)progress), 20}, 0.75, 20, GREEN);
 
     DrawText("RUST AINT CONTROLLING SHI", 20, 20, 20, RAYWHITE);
     DrawText(TextFormat("%.1f / %.1f", duration.now, duration.max), 20, 90, 20, RAYWHITE);
-    DrawText(TextFormat("Vol: %.0f%% %s", volume * 100, muted ? "(MUTED)" : ""), 20, 120, 20, RAYWHITE);
+    DrawText(TextFormat("Vol: %.0f%% %s", volume, muted ? "(MUTED)" : ""), 20, 120, 20, RAYWHITE);
 
-    if (playing) DrawText("PLAYING", 20, 150, 20, YELLOW);
+    if (playing.now) DrawText("PLAYING", 20, 150, 20, YELLOW);
     else DrawText("PAUSED", 20, 150, 20, GREEN);
 }
 
 void Musique::quit()
 {
-    UnloadMusicStream(music);
-    CloseAudioDevice();
+    audio.destroy();
 }

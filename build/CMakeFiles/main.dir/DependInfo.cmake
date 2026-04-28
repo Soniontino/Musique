@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/ziya/dev/main/musique/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
+  "/home/ziya/dev/main/musique/src/maudio.cpp" "CMakeFiles/main.dir/src/maudio.cpp.o" "gcc" "CMakeFiles/main.dir/src/maudio.cpp.o.d"
   "/home/ziya/dev/main/musique/src/musique.cpp" "CMakeFiles/main.dir/src/musique.cpp.o" "gcc" "CMakeFiles/main.dir/src/musique.cpp.o.d"
   "/home/ziya/dev/main/musique/src/utils.cpp" "CMakeFiles/main.dir/src/utils.cpp.o" "gcc" "CMakeFiles/main.dir/src/utils.cpp.o.d"
   "" "main" "gcc" "CMakeFiles/main.dir/link.d"

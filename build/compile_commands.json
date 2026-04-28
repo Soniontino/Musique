@@ -1,19 +1,25 @@
 [
 {
   "directory": "/home/ziya/dev/main/musique/build",
-  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -O0 -Wall -Wextra -g -o CMakeFiles/main.dir/src/main.cpp.o -c /home/ziya/dev/main/musique/src/main.cpp",
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED -I/home/ziya/dev/main/musique/include -O0 -Wall -Wextra -g -std=gnu++20 -o CMakeFiles/main.dir/src/main.cpp.o -c /home/ziya/dev/main/musique/src/main.cpp",
   "file": "/home/ziya/dev/main/musique/src/main.cpp",
   "output": "CMakeFiles/main.dir/src/main.cpp.o"
 },
 {
   "directory": "/home/ziya/dev/main/musique/build",
-  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -O0 -Wall -Wextra -g -o CMakeFiles/main.dir/src/musique.cpp.o -c /home/ziya/dev/main/musique/src/musique.cpp",
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED -I/home/ziya/dev/main/musique/include -O0 -Wall -Wextra -g -std=gnu++20 -o CMakeFiles/main.dir/src/maudio.cpp.o -c /home/ziya/dev/main/musique/src/maudio.cpp",
+  "file": "/home/ziya/dev/main/musique/src/maudio.cpp",
+  "output": "CMakeFiles/main.dir/src/maudio.cpp.o"
+},
+{
+  "directory": "/home/ziya/dev/main/musique/build",
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED -I/home/ziya/dev/main/musique/include -O0 -Wall -Wextra -g -std=gnu++20 -o CMakeFiles/main.dir/src/musique.cpp.o -c /home/ziya/dev/main/musique/src/musique.cpp",
   "file": "/home/ziya/dev/main/musique/src/musique.cpp",
   "output": "CMakeFiles/main.dir/src/musique.cpp.o"
 },
 {
   "directory": "/home/ziya/dev/main/musique/build",
-  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED  -O0 -Wall -Wextra -g -o CMakeFiles/main.dir/src/utils.cpp.o -c /home/ziya/dev/main/musique/src/utils.cpp",
+  "command": "/usr/bin/c++ -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED -I/home/ziya/dev/main/musique/include -O0 -Wall -Wextra -g -std=gnu++20 -o CMakeFiles/main.dir/src/utils.cpp.o -c /home/ziya/dev/main/musique/src/utils.cpp",
   "file": "/home/ziya/dev/main/musique/src/utils.cpp",
   "output": "CMakeFiles/main.dir/src/utils.cpp.o"
 }

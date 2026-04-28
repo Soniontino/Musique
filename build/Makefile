@@ -153,6 +153,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/maudio.o: src/maudio.cpp.o
+.PHONY : src/maudio.o
+
+# target to build an object file
+src/maudio.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/maudio.cpp.o
+.PHONY : src/maudio.cpp.o
+
+src/maudio.i: src/maudio.cpp.i
+.PHONY : src/maudio.i
+
+# target to preprocess a source file
+src/maudio.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/maudio.cpp.i
+.PHONY : src/maudio.cpp.i
+
+src/maudio.s: src/maudio.cpp.s
+.PHONY : src/maudio.s
+
+# target to generate assembly for a file
+src/maudio.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/maudio.cpp.s
+.PHONY : src/maudio.cpp.s
+
 src/musique.o: src/musique.cpp.o
 .PHONY : src/musique.o
 
@@ -213,6 +237,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/maudio.o"
+	@echo "... src/maudio.i"
+	@echo "... src/maudio.s"
 	@echo "... src/musique.o"
 	@echo "... src/musique.i"
 	@echo "... src/musique.s"

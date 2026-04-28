@@ -2,19 +2,20 @@
 
 int main(int argc, char* argv[])
 {
-    Musique musique;
+    Musique musique = Musique();
 
     switch (argc)
     {
-        CASE (1,
-            ;
-        );
         CASE (4,
             if (EQS(argv[1], "--window-size")) {
                 config::win_width_ini = std::stoi(argv[2]);
                 config::win_height_ini = std::stoi(argv[3]);
             }
         )
+
+        default: {
+            ;
+        }
     }
 
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);

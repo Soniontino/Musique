@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -DUSE_LIBTYPE_SHARED
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/ziya/dev/main/musique/include
 
-CXX_FLAGS = -O0 -Wall -Wextra -g
+CXX_FLAGS = -O0 -Wall -Wextra -g -std=gnu++20
 
