@@ -13,17 +13,20 @@ namespace rt {  // rt = runtime
 
 struct Musique
 {
+    Maudio audio;
+
     strview path;
     struct{bool prev,now;} playing = {true, true};
     bool muted = false;
     f64 volume = 100.0f;
     struct{f64 max,now;} duration = {0, 0};
 
-    Maudio audio;
+    Font font;
 
     Musique ();
     // load music file
-    void loadFile(const strview& path, bool play=true);
+    void loadAudio(const strview& path, bool play=true);
+    void renderText(const char* text, Vec2 pos, Color color, f32 size=27.f);
     void start();
     void input();
     void update();

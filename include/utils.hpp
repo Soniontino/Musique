@@ -28,3 +28,11 @@ inline bool IsMouseDoubleClicked(MouseButton button=MOUSE_BUTTON_LEFT, f32 inter
     lastClick = hit ? -1.0 : now;
     return hit;
 }
+
+inline Vec2 WinCenter(f32 width, f32 height)
+{
+    return {
+        GetScreenWidth()/2.0f - width/2.0f,
+        GetScreenHeight()/2.0f + height/2.0f
+    };
+}
