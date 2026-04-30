@@ -20,17 +20,20 @@ int main(int argc, char* argv[])
 
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);
     InitWindow(config::win_width_ini, config::win_height_ini, "Musique");
-    SetTargetFPS(60);
+    // SetExitKey(0); unset exit key from esc
+    SetTargetFPS(GetMonitorRefreshRate(GetCurrentMonitor()));
 
     musique.start();
     while (!WindowShouldClose()) {
         rt::dt = GetFrameTime();
-        rt::win_h = GetScreenWidth();
+        rt::win_w = GetScreenWidth();
         rt::win_h = GetScreenHeight();
+
         if (IsKeyTriggered(KEY_SLASH)) {
             Mprint(
                 "fps: ", 1.0f/rt::dt, "\n",
-                "dur: ", musique.duration.now, "\n"
+                "mouse: ", GetMouseX(), " : ", GetMouseY(), "\n",
+                "dur: ", musique.duration.now, "\n",
             "\n");
         }
 
@@ -40,6 +43,9 @@ int main(int argc, char* argv[])
         ClearBackground(BLACK);
         musique.render();
         EndDrawing();
+
+        rt::prev_win_w = rt::win_w;
+        rt::prev_win_h = rt::win_h;
     }
 
     musique.quit();

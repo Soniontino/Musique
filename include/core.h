@@ -11,6 +11,7 @@
 
 #define RESOURCES_D "resources/"
 #define FONT_UI RESOURCES_D "fonts/InterVariable.ttf"
+#define FONT_UI_SIZE 27
 
 #define CASE(_val, _stmt) \
     case _val: {_stmt}; break;
