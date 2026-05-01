@@ -586,6 +586,7 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/bits/iscanonical.h \
   /usr/include/bits/libc-header-start.h \
   /usr/include/bits/libm-simd-decl-stubs.h \
+  /usr/include/bits/local_lim.h \
   /usr/include/bits/locale.h \
   /usr/include/bits/long-double.h \
   /usr/include/bits/math-vector.h \
@@ -593,6 +594,8 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/bits/mathcalls-macros.h \
   /usr/include/bits/mathcalls-narrow.h \
   /usr/include/bits/mathcalls.h \
+  /usr/include/bits/posix1_lim.h \
+  /usr/include/bits/posix2_lim.h \
   /usr/include/bits/pthread_stack_min-dynamic.h \
   /usr/include/bits/pthreadtypes-arch.h \
   /usr/include/bits/pthreadtypes.h \
@@ -638,11 +641,13 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/bits/types/wint_t.h \
   /usr/include/bits/typesizes.h \
   /usr/include/bits/uintn-identity.h \
+  /usr/include/bits/uio_lim.h \
   /usr/include/bits/waitflags.h \
   /usr/include/bits/waitstatus.h \
   /usr/include/bits/wchar.h \
   /usr/include/bits/wctype-wchar.h \
   /usr/include/bits/wordsize.h \
+  /usr/include/bits/xopen_lim.h \
   /usr/include/c++/15.2.1/algorithm \
   /usr/include/c++/15.2.1/array \
   /usr/include/c++/15.2.1/backward/binders.h \
@@ -805,7 +810,9 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
   /usr/include/libintl.h \
+  /usr/include/limits.h \
   /usr/include/linux/errno.h \
+  /usr/include/linux/limits.h \
   /usr/include/linux/posix_types.h \
   /usr/include/linux/sched/types.h \
   /usr/include/linux/stddef.h \
@@ -828,9 +835,11 @@ CMakeFiles/main.dir/src/musique.cpp.o: /home/ziya/dev/main/musique/src/musique.c
   /usr/include/time.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdarg.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stddef.h \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/stdint.h \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h
 
 CMakeFiles/main.dir/src/utils.cpp.o: /home/ziya/dev/main/musique/src/utils.cpp \
   /home/ziya/dev/main/musique/include/core.h \
@@ -1544,6 +1553,22 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/lib32/libgnutls.so.30:
 
+/usr/lib32/libgmp.so.10:
+
+/usr/lib32/libglib-2.0.so.0:
+
+/usr/lib32/libgio-2.0.so.0:
+
+/usr/lib32/libgbm.so.1:
+
+/usr/lib32/libfribidi.so.0:
+
+/usr/lib32/libfreetype.so.6:
+
+/usr/lib32/libmount.so.1:
+
+/usr/lib32/libfontconfig.so.1:
+
 /usr/include/linux/sched/types.h:
 
 /usr/include/c++/15.2.1/bits/utility.h:
@@ -1614,11 +1639,7 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/lib/pulseaudio/libpulsecommon-17.0.so:
 
-/usr/include/c++/15.2.1/ext/numeric_traits.h:
-
 /usr/include/errno.h:
-
-/usr/lib32/libfreetype.so.6:
 
 /usr/include/c++/15.2.1/pstl/glue_algorithm_defs.h:
 
@@ -1629,8 +1650,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/c++/15.2.1/bits/stl_heap.h:
 
 /usr/include/asm-generic/bitsperlong.h:
-
-/usr/lib32/libgmodule-2.0.so.0:
 
 /usr/include/c++/15.2.1/new:
 
@@ -1699,8 +1718,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/lib32/libOpenCL.so.1:
 
 /usr/include/c++/15.2.1/bits/iterator_concepts.h:
-
-/usr/lib32/libgmp.so.10:
 
 /usr/include/c++/15.2.1/type_traits:
 
@@ -1792,8 +1809,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/c++/15.2.1/bits/functional_hash.h:
 
-/usr/lib/crtn.o:
-
 /usr/include/bits/types/clockid_t.h:
 
 /usr/lib/libpulse.so.0:
@@ -1803,10 +1818,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/bits/setjmp.h:
 
 /usr/lib/libtheoraenc.so.2:
-
-/usr/lib32/libmount.so.1:
-
-/usr/lib32/libfontconfig.so.1:
 
 /usr/include/bits/wchar.h:
 
@@ -1870,6 +1881,10 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/lib/libva-x11.so.2:
 
+/usr/lib32/libgdk_pixbuf-2.0.so.0:
+
+/usr/include/c++/15.2.1/pstl/pstl_config.h:
+
 /usr/lib32/libvulkan.so.1:
 
 /usr/include/bits/pthread_stack_min-dynamic.h:
@@ -1882,8 +1897,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/include/bits/wctype-wchar.h:
 
-/usr/lib32/libgbm.so.1:
-
 /usr/include/c++/15.2.1/cctype:
 
 /usr/include/c++/15.2.1/bits/hash_bytes.h:
@@ -1891,6 +1904,10 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/lib32/libdisplay-info.so.3:
 
 /usr/include/c++/15.2.1/tr1/ell_integral.tcc:
+
+/usr/include/c++/15.2.1/ext/numeric_traits.h:
+
+/usr/include/bits/xopen_lim.h:
 
 /usr/lib/libnghttp3.so.9:
 
@@ -1952,8 +1969,6 @@ CMakeFiles/main.dir/src/main.cpp.o:
 
 /usr/lib/libOpenCL.so.1:
 
-/usr/lib32/libglib-2.0.so.0:
-
 /usr/include/c++/15.2.1/tr1/beta_function.tcc:
 
 /usr/include/bits/pthreadtypes.h:
@@ -1995,6 +2010,8 @@ CMakeFiles/main.dir/src/main.cpp.o:
 /usr/include/c++/15.2.1/x86_64-pc-linux-gnu/bits/ctype_base.h:
 
 /usr/include/bits/floatn-common.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/limits.h:
 
 /usr/include/c++/15.2.1/cstdio:
 
@@ -2076,7 +2093,7 @@ CMakeFiles/main.dir/src/maudio.cpp.o:
 
 /usr/include/bits/math-vector.h:
 
-/usr/lib32/libfribidi.so.0:
+/usr/include/bits/uio_lim.h:
 
 /usr/include/c++/15.2.1/bits/char_traits.h:
 
@@ -2196,6 +2213,22 @@ CMakeFiles/main.dir/src/maudio.cpp.o:
 
 /usr/include/mpv/client.h:
 
+/usr/include/bits/local_lim.h:
+
+/usr/include/bits/posix2_lim.h:
+
+/usr/lib/libwayland-client.so.0:
+
+/usr/lib32/libgmodule-2.0.so.0:
+
+/usr/include/limits.h:
+
+/usr/lib/crtn.o:
+
+/usr/include/linux/limits.h:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/15.2.1/include/syslimits.h:
+
 /usr/lib/Scrt1.o:
 
 /usr/lib/libmodplug.so.1:
@@ -2235,6 +2268,8 @@ CMakeFiles/main.dir/src/maudio.cpp.o:
 /usr/lib/ld-linux-x86-64.so.2:
 
 /usr/lib/libkrb5support.so.0:
+
+/usr/include/bits/posix1_lim.h:
 
 /usr/lib/libEGL.so.1:
 
@@ -2614,8 +2649,6 @@ CMakeFiles/main.dir/src/musique.cpp.o:
 
 /usr/lib/libvulkan.so.1:
 
-/usr/lib/libwayland-client.so.0:
-
 /usr/lib/libwebp.so.7:
 
 /usr/include/c++/15.2.1/bits/exception.h:
@@ -2667,9 +2700,3 @@ CMakeFiles/main.dir/src/musique.cpp.o:
 /usr/include/c++/15.2.1/tr1/riemann_zeta.tcc:
 
 /usr/lib32/libdatrie.so.1:
-
-/usr/include/c++/15.2.1/pstl/pstl_config.h:
-
-/usr/lib32/libgdk_pixbuf-2.0.so.0:
-
-/usr/lib32/libgio-2.0.so.0:

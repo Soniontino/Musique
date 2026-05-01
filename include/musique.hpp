@@ -11,6 +11,8 @@ namespace rt {  // rt = runtime
     inline f32 prev_win_h = config::win_height_ini;
     inline f32 win_w = prev_win_w;
     inline f32 win_h = prev_win_h;
+    inline f32 zoomX = 1.0;
+    inline f32 zoomY = 1.0;
     inline enum Mode{NORM, DEV} MODE = NORM; // for debugging shi visually
 }
 
@@ -27,9 +29,8 @@ struct Musique
     static inline Font font;
 
     Musique ();
-    // load music file
-    void loadAudio(const strview& path, bool play=true);
-    // void renderText(const char* text, Vec2 pos, Color color, f32 size=27.f);
+    void openFile(/*const char* path = nullptr*/);
+    void loadAudio(bool play=true);
     void start();
     void input();
     void update();
@@ -38,6 +39,6 @@ struct Musique
 
     static inline void renderText(const char* text, Vec2 pos, Color color, f32 size)
     {
-        DrawTextEx(font, text, pos, size, 0.1, color);
+        DrawTextEx(font, text, pos, size*rt::zoomY, 0.1, color);
     }
 };

@@ -1,16 +1,33 @@
 #include "musique.hpp"
+#include "limits.h"
 
 Musique::Musique()
 {
     ;
 }
 
-void Musique::loadAudio(const strview& path, bool play)
+void Musique::openFile()
 {
-    auto build_str = std::format("{}/{}", RESOURCES_D, path);
-    audio.load(build_str.data());
+    FILE* pipe = popen("zenity --file-selection", "r"); if (!pipe) return;
+
+    static char buf[4096] = {};
+    fgets(buf, sizeof(buf), pipe);
+    pclose(pipe);
+
+    buf[strcspn(buf, "\n")] = '\0';
+    if (buf[0] == '\0') return;  // dialog canceled
+
+    this->path = buf;
+    Mprint("Opened: ", path, "\n\n");
+}
+
+// loads audio file of the path member(field)
+void Musique::loadAudio(bool play)
+{
+    audio.load(path.data());
     audio.setPlaying(play);
 }
+
 
 void Musique::start()
 {
@@ -20,15 +37,17 @@ void Musique::start()
         Mprint("Musique: Font could not loaded!\n");
         CloseWindow(); exit(1);
     }
-
-    try { loadAudio("audio/song.mp3"); }
-    catch (std::exception&) { audio.destroy(); throw; }
 }
 
 void Musique::input()
 {
     const auto& mouseX = GetMouseX();
     // const auto mouseY = GetMouseY();
+
+    if (IsKeyPressed(KEY_O)) {
+        openFile();
+        loadAudio();
+    }
 
     if (IsKeyTriggered(KEY_SPACE)
         || (IsMouseButtonPressed(0) && (mouseX<(rt::win_w*0.75) && mouseX>(rt::win_w*0.25)))
@@ -77,8 +96,6 @@ void Musique::update()
 
 void Musique::render()
 {
-    Vec2 win_delta = {rt::win_w/rt::prev_win_w, rt::win_h/rt::prev_win_h};
-
     f32 progress = {
         (duration.max > 0.0)? f32(duration.now/duration.max) : 0.f
     };
@@ -111,7 +128,7 @@ void Musique::render()
     Vec2 pb_pos = WinCenter(pb_size.x, pb_size.y);
     pb_pos.y *= 1.625f;
 
-    ProgressBar pb(pb_pos.x, pb_pos.y, pb_size.x*win_delta.x, pb_size.y*win_delta.y*0.8);
+    ProgressBar pb(pb_pos.x, pb_pos.y, pb_size.x*rt::zoomX, pb_size.y*rt::zoomY*0.8);
     pb.draw(DARKGRAY);
     pb.draw(BLUE, progress);
 
@@ -119,7 +136,9 @@ void Musique::render()
     Label lplaystat;
     lplaystat.txt = playing.now ? "PLAYING":"PAUSED";
     lplaystat.pos = {
-        pb_pos.x + pb_size.x/2 - MeasureText(lplaystat.txt, 20)/2,
+        pb_pos.x + pb_size.x/2 - MeasureTextEx(
+            font, lplaystat.txt, lplaystat.fsize*rt::zoomY, 0.1
+        ).x/2.0f,
         pb_pos.y * 0.95f
     };
 
@@ -131,9 +150,9 @@ void Musique::render()
     };
 
     Label lvolume;
-    lvolume.txt  = TextFormat("Vol: %.0f%% %s", volume, muted ? "(MUTED)":"");
+    lvolume.txt  = TextFormat("Vol: %.0f%% %s", volume, muted ? "(MUTED)  ":"");
     lvolume.pos  = {
-        pb_pos.x - MeasureText(lvolume.txt, 20) - 15,
+        pb_pos.x - MeasureTextEx(font, lvolume.txt, lvolume.fsize*rt::zoomY, 0.1f).x - 15,
         pb_pos.y
     };
 

@@ -1,6 +1,7 @@
 #pragma once
 #include "core.h"
 
+
 template <class... T>
 inline void Mprint(T... stream)
 {

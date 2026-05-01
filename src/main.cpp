@@ -19,6 +19,7 @@ int main(int argc, char* argv[])
     }
 
     SetConfigFlags(FLAG_WINDOW_RESIZABLE);
+    SetTraceLogLevel(LOG_NONE);  // disable raylib logs
     InitWindow(config::win_width_ini, config::win_height_ini, "Musique");
     // SetExitKey(0); unset exit key from esc
     SetTargetFPS(GetMonitorRefreshRate(GetCurrentMonitor()));
@@ -28,6 +29,8 @@ int main(int argc, char* argv[])
         rt::dt = GetFrameTime();
         rt::win_w = GetScreenWidth();
         rt::win_h = GetScreenHeight();
+        rt::zoomX = rt::win_w / rt::prev_win_w;
+        rt::zoomY = rt::win_h / rt::prev_win_h;
 
         if (IsKeyTriggered(KEY_SLASH)) {
             Mprint(
